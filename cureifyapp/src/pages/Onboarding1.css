@@ -1,0 +1,43 @@
+body{
+    width: 415px;
+    height: 896px;
+    /* background: rebeccapurple; */
+    margin: 0;
+}
+.onboarddiv{
+    width: 415px;
+height: 826px;
+background: #36404D;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+  background-image: url('../assets/bgimg.png');
+}
+.onbtitle{
+    color: #F5F5F5;
+text-align: center;
+font-family: poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 0;
+}
+.ondes{
+    color: rgba(251, 251, 250, 0.87);
+text-align: center;
+font-family: poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 348px;
+margin: 0;
+margin-top: 8px;
+}
+.buttonholder{
+    width: 348px;
+    display: flex;
+    justify-content: end;
+}
