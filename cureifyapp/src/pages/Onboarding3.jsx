@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 const Onboarding1 = () => 
     {
-    const [loading, setLoading] = useState(true);
     const [data, setData] = useState("");
 
     useEffect(() => {
@@ -20,12 +19,10 @@ const Onboarding1 = () =>
     .eq("id", 3);
 
 setData(res.data[0]);
-            setLoading(false);
         }
         getOnboarding();
     }, []);
 
-    if (loading) return <p>Loading...</p>;
 
     return (
         <>
