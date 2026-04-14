@@ -3,7 +3,7 @@ import "./TextButton.css"
 const TextButton = (props) => {
     return ( <>
     
-    <p className='textb'>{props.text}</p>
+    <p className='textb' style={{ color: props.color }}>{props.text}</p>
     
     
     

@@ -1,0 +1,119 @@
+.loginbg{
+     width: 415px;
+    height: 826px;
+      background-image: url('../assets/loginbg.svg');
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+}
+.iconc{
+    margin-bottom: 20px;
+}
+.logintext{
+color: #FFF;
+text-align: center;
+font-family: poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+}
+.logindes{
+    color: #FFF;
+text-align: center;
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+}
+.forloginpg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-items: center;
+}
+.logincont{
+    display: flex;
+    width: 375px;
+    height: 528px;
+/* padding: 20px; */
+justify-content: space-evenly;
+align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+background: #FFF;
+box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.21);
+
+}
+.for2inputs{
+      display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.titlewinput{
+      display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+.inputtile{
+    color: #36404D;
+font-family: poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+}
+.inputc{
+    display: flex;
+height: 48px;
+width: 335px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+border-radius: 10px;
+border: 0.667px solid #C8C8C8;
+background: #FFF;
+
+}
+.checktext{
+    color: var(--Grey, #6C7278);
+text-align: center;
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 150%; /* 24px */
+letter-spacing: -0.16px;
+}
+.chachbox{
+ border: 2px solid #9ca3af;
+width: 13.417px;
+border-radius: 4px;
+height: 13.417px;
+}
+.forcheckbox{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.greytext{
+    color: #36404D;
+}
+.for2buttons{
+      display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+.textbuttons2{
+    display: flex;
+   width: 335px;
+   justify-content: space-between;
+}

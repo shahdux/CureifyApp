@@ -1,0 +1,20 @@
+.appbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 335px;
+height: 48px;
+border-radius: 10px;
+border: 0.667px solid #C8C8C8;
+background: #FFF;
+}
+.loginapptext{
+    color: #36404D;
+font-family: poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
