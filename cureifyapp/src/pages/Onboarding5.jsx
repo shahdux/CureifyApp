@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from "../supabase";
 import "./Onboarding1.css";
-import dots from '../assets/dots3.svg';
+import dots from '../assets/dots5.svg';
 
 import Button from '../components/Button';
 import TextButton from '../components/TextButton';
 import { Link } from 'react-router-dom';
 
-const Onboarding3 = () => 
+const Onboarding5 = () => 
     {
     const [data, setData] = useState("");
 
@@ -16,7 +16,7 @@ const Onboarding3 = () =>
             
             const res = await supabase.from("Onboarding")
         .select("*")
-    .eq("id", 3);
+    .eq("id", 5);
 
 setData(res.data[0]);
         }
@@ -41,7 +41,7 @@ setData(res.data[0]);
 <img src={dots} alt="dots icon" />  
 <div className='dots'></div>
 
-                <Link to="/onboarding-4"  style={{ textDecoration: 'none' }}>
+                <Link to="/onboarding-6"  style={{ textDecoration: 'none' }}>
            <Button text={data.button2} />
                 </Link>
             </div>
@@ -49,4 +49,4 @@ setData(res.data[0]);
     );
 }
 
-export default Onboarding3;
+export default Onboarding5;

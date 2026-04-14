@@ -41,3 +41,20 @@ margin-top: 8px;
     display: flex;
     justify-content: end;
 }
+.logindes{
+    color: #FFF;
+text-align: center;
+font-family: Calibri;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+margin-top: -20px;
+}
+.greentext{
+    color: #00A4AA;
+    font-weight: 700;
+
+
+}
