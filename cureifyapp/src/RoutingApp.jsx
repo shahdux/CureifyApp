@@ -8,6 +8,8 @@ import Onboarding5 from './pages/Onboarding5';
 import Onboarding6 from './pages/Onboarding6';
 import Splash from './pages/Splash';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+
 
 
 
@@ -23,6 +25,8 @@ const RoutingApp = () => {
 <Route path='/onboarding-5' element={<Onboarding5 />} />
 <Route path='/onboarding-6' element={<Onboarding6 />} />
 <Route path='/login' element={<Login />} />
+<Route path='/signup' element={<SignUp />} />
+
 
 
 

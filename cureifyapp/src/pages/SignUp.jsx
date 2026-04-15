@@ -9,17 +9,17 @@ import AppButton from '../components/AppButton';
 import TextButton from '../components/TextButton';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const SignUp = () => {
     return ( <>
     <div className='loginbg'>
 
 <div className='forloginpg'>
     <img src={icon} alt="logo icon" className='iconc'/>
-    <p className='logintext'>Login to your account</p>
-        <p className='logindes'>Log in with one of the following</p>
+    <p className='logintext'>Sign Up</p>
+        <p className='logindes'>Sign Up with one of the following</p>
 
 </div>
-<div className='logincont'>
+<div className='logincont longerw'>
     <div className='for2buttons'>
         <AppButton image={apple} imgalt="apple icon" apptext="Login with Apple" />
                 <AppButton image={google} imgalt="google icon" apptext="Login with Google" />
@@ -28,6 +28,10 @@ const Login = () => {
     </div>
     <div className='forinputswtexts'>
         <div className='for2inputs'>
+             <div className='titlewinput'>
+                <p className='inputtile'>Name</p>
+                <input type="email" className='inputc'/>
+            </div>
             <div className='titlewinput'>
                 <p className='inputtile'>Email</p>
                 <input type="email" className='inputc'/>
@@ -37,24 +41,14 @@ const Login = () => {
                 <input type="password" className='inputc' />
             </div>
         </div>
-        <div className='textbuttons2'>
-            <div className='forcheckbox'>
-            <div className='chachbox'>
-            </div>
-                <p className='checktext'>Remember me</p>
+        <div className='mrtop'></div>
+                           <Link to="/login"  style={{ textDecoration: 'none' }}>
 
-            </div>
-            <TextButton text="Forget Password?" color="#00A4AA"/>
-
-        </div>
-                            <Link to="/home"  style={{ textDecoration: 'none' }}>
-
-        <Button text="Login" width="335px"/>
-        </Link>
+        <Button text="Sign Up" width="335px"/></Link>
     </div>
-                    <Link to="/signup"  style={{ textDecoration: 'none' }}>
+                    <Link to="/login"  style={{ textDecoration: 'none' }}>
 
-                    <p className='logindes greytext'>Don’t have an account? <span className='greentext'>Sign Up</span></p>
+                    <p className='logindes greytext'>Already have an account?<span className='greentext'> Log in</span></p>
 </Link>
 </div>
 
@@ -71,4 +65,4 @@ const Login = () => {
     </> );
 }
  
-export default Login;
+export default SignUp;

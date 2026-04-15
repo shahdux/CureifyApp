@@ -43,7 +43,9 @@ setData(res.data[0]);
                 <Link to="/onboarding-6"  style={{ textDecoration: 'none' }}>
            <Button text={data.button2} />
                 </Link>
-                <p className='logindes'>Already have an account? <span className='greentext'> Log in</span></p>
+                                <Link to="/login"  style={{ textDecoration: 'none' }}>
+                
+                <p className='logindes'>Already have an account? <span className='greentext'> Log in</span></p></Link>
             </div>
         </>
     );
