@@ -1,0 +1,19 @@
+.nav{
+    width: 415px;
+height: 88px;
+background: #FFF;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.circle{
+    display: flex;
+    width: 50px;
+height: 49px;
+justify-content: center;
+align-items: center;
+
+border-radius: 24.503px;
+background: linear-gradient(132deg, #00A4AA -4.93%, #004244 106.71%);
+box-shadow: 0 19.143px 38.29px -9.189px rgba(0, 167, 172, 0.50);
+}
