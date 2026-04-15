@@ -6,11 +6,15 @@ height: 896px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+       gap: 16px;
+            /* padding: 30px 0px 70px 0px; */
+
 
 }
 .profilewnot{
     display: flex;
 }
+
 .bluecard{
     display: flex;
 width: 375px;
@@ -18,6 +22,7 @@ height: 152px;
 flex-direction: column;
 align-items: center;
 gap: 16px;
+justify-content: center;
 border-radius: 20px;
 background: linear-gradient(180deg, #0053AD 0%, #002247 100%);
 box-shadow: 0 20px 25px -5px #DBEAFE, 0 8px 10px -6px #DBEAFE;
@@ -45,11 +50,21 @@ margin: 0;
     width: 327px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .titlewbutton{
    width: 375px;
     display: flex;
     justify-content: space-between;  
+}
+.medcardTime2{
+    color: #E7000B;
+font-family: Arial;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 114.286% */
+margin: 0;
 }
 .sectiontitle{
     color: #36404D;
@@ -88,10 +103,12 @@ margin: 0;
     width: 375px;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 .profilpart{
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 .lowmeds{
      display: flex;
@@ -132,4 +149,13 @@ line-height: 20px; /* 125% */
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+.points{
+    color: #FFF;
+text-align: center;
+font-family: poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 27px; /* 270% */
 }

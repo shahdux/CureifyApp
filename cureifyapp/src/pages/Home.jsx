@@ -1,119 +1,11 @@
-// import React, { Component } from 'react';
-// import "./Home.css";
-// import Navbar from '../components/Navbar';
-// import export1 from '../assets/export.svg';
-// import progress from '../assets/progress.svg';
-// import notofications from '../assets/noti.svg';
-// import reo from '../assets/reo.svg';
 
-// import TextButton from '../components/TextButton';
-// import MedicineCard from '../components/MedicineCard';
-
-
-// const Home = () => {
-//     return (  <>
-//     <div className='maindiv'>
-
-// <div className='profilewnot'>
-//     <div className='profilpart'>
-
-//     <img src="" alt="profile picture" />
-//     <p className='name'>Hello, !</p>
-//     <div className='pointsdiv'>
-//             <p className='points'></p>
-
-//     </div>
-//     </div>
-//     <img src={notofications} alt="notifications icon" />
-// </div>
-// <div className='bluecard'>
-//     <div className='amountwicon'>
-//         <p className='amount'></p>
-//         <div className='exporticon'>
-//             <img src={export1} alt="export icon" />
-//         </div>
-//     </div>
-//                 <img src={progress} alt="export icon" />
-//  <div className='amountwicon'>
-//         <p className='amount'></p>
-//         <div className='amountwicon'>
-//         <p className='amount'></p>
-//        <p className='next'></p>
-//     </div>
-//     </div>
-    
-// </div>
-// <div className='medicationsection'>
-//     <div className='titlewbutton'>
-//         <p className='sectiontitle'>Today's Medication</p>
-//         <TextButton text="View details" color="#00A4AA" weight="700"/>
-//     </div>
-//     <div className='formedcards'>
-//        <MedicineCard
-//     name="Vibramycin 500mg"
-//     time="09:00 AM"
-//     instruction="Take with food"
-// image=""/>
-// <MedicineCard
-//     name="Vibramycin 500mg"
-//     time="09:00 AM"
-//     instruction="Take with food"
-// image=""/>
-// <MedicineCard
-//     name="Vibramycin 500mg"
-//     time="09:00 AM"
-//     instruction="Take with food"
-//     image=""
-// />
-//     </div>
-// </div>
-// <div className='medicationsection'>
-//     <div className='titlewbutton'>
-//         <p className='sectiontitle'>Medicines Running Low</p>
-//     </div>
-//      <div className='medcard'>
-//             <div className='forfirst2'>
-
-          
-
-//             <div className='medcardInfo'>
-//                 <p className='medcardName'></p>
-//                 <div className='medcardMeta'>
-//                     <span className='medcardTime red'></span>
-//                     <span className='medcardDot' />
-//                     <span className='medcardTime red'></span>
-//                 </div>
-//             </div>
-//             </div>
-
-//            <div className='reorder'>
-//             <img src={reo} alt="re-order icon" />
-//             <p className='rtext'>Re-order</p>
-//            </div>
-//         </div>
-// </div>
-
-
-//  <Navbar />
-//     </div>
-
-
-
-    
-    
-    
-    
-    
-    
-//     </>);
-// }
- 
-// export default Home;
 import React, { useEffect, useState } from 'react';
 import "./Home.css";
 import Navbar from '../components/Navbar';
 import export1 from '../assets/export.svg';
 import progress from '../assets/progress.svg';
+import profile from '../assets/profile.svg';
+
 import notofications from '../assets/noti.svg';
 import reo from '../assets/reo.svg';
 
@@ -142,10 +34,10 @@ const Home = () => {
 
             <div className='profilewnot'>
                 <div className='profilpart'>
-                    <img src="" alt="profile picture" />
-                    <p className='name'>Hello, !</p>
+                    <img src={profile} alt="profile picture" />
+                    <p className='name'>Hello, Badr!</p>
                     <div className='pointsdiv'>
-                        <p className='points'></p>
+                        <p className='points'>200 points</p>
                     </div>
                 </div>
                 <img src={notofications} alt="notifications icon" />
@@ -153,7 +45,7 @@ const Home = () => {
 
             <div className='bluecard'>
                 <div className='amountwicon'>
-                    <p className='amount'></p>
+                    <p className='amount'>You've taken 1 of 4 doses today.</p>
                     <div className='exporticon'>
                         <img src={export1} alt="export icon" />
                     </div>
@@ -162,8 +54,8 @@ const Home = () => {
                 <div className='amountwicon'>
                     <p className='amount'></p>
                     <div className='amountwicon'>
-                        <p className='amount'></p>
-                        <p className='next'></p>
+                        <p className='amount'>33% Completed</p>
+                        <p className='amount'>Next: Vibramycin (9:00 AM)</p>
                     </div>
                 </div>
             </div>
@@ -199,11 +91,9 @@ const Home = () => {
                 <div className='medcard'>
                     <div className='forfirst2'>
                         <div className='medcardInfo'>
-                            <p className='medcardName'></p>
+                            <p className='medcardName'>Anuva 50mg</p>
                             <div className='medcardMeta'>
-                                <span className='medcardTime red'></span>
-                                <span className='medcardDot' />
-                                <span className='medcardTime red'></span>
+                                <span className='medcardTime2 red'>2 pills left  •  2 days remaining</span>
                             </div>
                         </div>
                     </div>
@@ -220,3 +110,4 @@ const Home = () => {
 }
 
 export default Home;
+
