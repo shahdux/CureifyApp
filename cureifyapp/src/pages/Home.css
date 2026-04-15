@@ -2,5 +2,134 @@
    width: 415px;
 height: 896px;
         background: linear-gradient(180deg, #FBFAF7 0%, #F1F8FF 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+}
+.profilewnot{
+    display: flex;
+}
+.bluecard{
+    display: flex;
+width: 375px;
+height: 152px;
+flex-direction: column;
+align-items: center;
+gap: 16px;
+border-radius: 20px;
+background: linear-gradient(180deg, #0053AD 0%, #002247 100%);
+box-shadow: 0 20px 25px -5px #DBEAFE, 0 8px 10px -6px #DBEAFE;
+}
+.exporticon{
+ border-radius: 14px;
+background: rgba(255, 255, 255, 0.20);
+display: flex;
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.amount{
+    color: #DBEAFE;
+font-family: Arial;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+margin: 0;
+}
+.amountwicon{
+    width: 327px;
+    display: flex;
+    justify-content: space-between;
+}
+.titlewbutton{
+   width: 375px;
+    display: flex;
+    justify-content: space-between;  
+}
+.sectiontitle{
+    color: #36404D;
+font-family: Arial;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px; /* 155.556% */
+}
+.medicationsection{
+    display: flex;
+    flex-direction: column;
+}
+.points{
+    width: 92px;
+height: 26px;
+border-radius: 20px;
+background: linear-gradient(90deg, #0053AD 2.17%, #002247 100%);
+box-shadow: 0 20px 25px -5px #DBEAFE, 0 8px 10px -6px #DBEAFE;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.name{
+    color: #36404D;
+font-family: Arial;
+font-size: 24px;
+font-style: normal;
+font-weight: 900;
+line-height: 36px; /* 150% */
+letter-spacing: -0.75px;
+margin: 0;
+}
+.profilewnot{
+    display: flex;
+    width: 375px;
+    justify-content: space-between;
+    align-items: center;
+}
+.profilpart{
+    display: flex;
+    align-items: center;
+}
+.lowmeds{
+     display: flex;
+    width: 375px;
+height: 81.333px;
+align-items: center;
+gap: 16px;
+align-items: center;
+justify-content: space-around;
+border-radius: 16px;
+border: 0.667px solid #F3F4F6;
+background: #FFF;
+box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+}
+.reorder{
+    display: flex;
+border-radius: 8px;
+border: 1px solid #00A4AA;
+justify-content: center;
+align-items: center;
+gap: 8px;
+height: 36px;
+width: 120px;
+}
+.rtext{
+    color: #00A4AA;
+text-align: center;
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 125% */
+}
+.red{
+    color: #E7000B;
+}
+.formedcards{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }

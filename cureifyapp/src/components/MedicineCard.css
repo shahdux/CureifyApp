@@ -1,0 +1,90 @@
+.medcard{
+    display: flex;
+    width: 375px;
+height: 81.333px;
+align-items: center;
+gap: 16px;
+align-items: center;
+justify-content: space-around;
+border-radius: 16px;
+border: 0.667px solid #F3F4F6;
+background: #FFF;
+box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+}
+
+
+.medcardIcon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #1d5f6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.medcardIcon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.medcardInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 180px;
+    
+}
+
+.medcardName {
+  color: #36404D;
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 150% */
+margin: 0;
+}
+
+.medcardMeta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #9a9a9a;
+}
+
+.medcardDot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #9a9a9a;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.forfirst2{
+    display: flex;
+    gap: 12px;
+}
+.medcardToggle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1.5px solid #d0d0d0;
+    background: transparent;
+    flex-shrink: 0;
+    cursor: pointer;
+    padding: 0;
+}
+.medcardTime{
+    color: #6A7282;
+font-family: Arial;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; /* 133.333% */
+margin: 0;
+}

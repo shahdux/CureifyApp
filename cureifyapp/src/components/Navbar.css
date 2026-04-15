@@ -5,6 +5,9 @@ background: #FFF;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+position: fixed;
+z-index: 100;
+    margin-top: 660px;
 }
 .circle{
     display: flex;
