@@ -5,13 +5,16 @@ import search from '../assets/search.svg';
 import add from '../assets/Icon.svg';
 import bag from '../assets/cart.svg';
 import health from '../assets/health.svg';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
     return ( <>
     <div className='nav'>
 <img src={home} alt="home icon" />
+<Link to="/search">
 <img src={search} alt="home icon" />
+</Link>
 <div className='circle'>
 <img src={add} alt="home icon" />
 

@@ -10,6 +10,7 @@ import Splash from './pages/Splash';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
+import Search from './pages/Search';
 
 
 
@@ -28,6 +29,8 @@ const RoutingApp = () => {
 <Route path='/login' element={<Login />} />
 <Route path='/signup' element={<SignUp />} />
 <Route path='/home' element={<Home />} />
+<Route path='/search' element={<Search />} />
+
 
 
 

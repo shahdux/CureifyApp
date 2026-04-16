@@ -7,7 +7,7 @@ justify-content: space-evenly;
 align-items: center;
 position: fixed;
 z-index: 100;
-    margin-top: 660px;
+   margin-top: 720px;
 }
 .circle{
     display: flex;
