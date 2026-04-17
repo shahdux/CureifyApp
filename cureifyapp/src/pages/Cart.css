@@ -97,3 +97,10 @@
 .gap0{
     gap: 0;
 }
+.w375{
+    width: 355px;
+}
+.h600{
+   height: 595px;
+       justify-content: flex-start;
+}

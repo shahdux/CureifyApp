@@ -328,10 +328,14 @@ width: 290px;
     transform: scale(0.9); /* Slight press effect */
 }
 
-/* The actual white solid circle */
+
 .capture-btn-inner {
     width: 58px;
     height: 58px;
     background: #ffffff;
     border-radius: 50%;
+}
+.bg2{
+     background-image: url('../assets/img2.png');
+
 }
