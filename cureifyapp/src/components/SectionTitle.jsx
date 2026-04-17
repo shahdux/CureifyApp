@@ -3,7 +3,10 @@ import "./SectionTitle.css"
 const SectionTitle = (props) => {
     return ( <>
     
-    <p className='sttile'>{props.title}</p>
+    <p className='sttile'    style={{
+                    textAlign: props.align,
+                    margin: props.margin
+                }}>{props.title}</p>
     </> );
 }
  

@@ -1,0 +1,112 @@
+.extractedcard {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 20px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+        width: 375px;
+    flex-direction: column;
+    box-sizing: border-box; /* Important for percentage widths */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.extractedheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.extractedmedname {
+    font-size: 20px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.extractedmedsubtitle {
+    font-size: 14px;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 4px 0 0 0;
+}
+
+.extractedactions {
+    display: flex;
+    gap: 12px;
+}
+
+.editicon {
+    font-size: 18px;
+    color: #36404D;
+    cursor: pointer;
+}
+
+.deleteicon {
+    font-size: 18px;
+    color: #FF3B6B;
+    cursor: pointer;
+}
+
+.extracteddivider {
+    height: 1px;
+    background: #36404D;
+    opacity: 0.1; /* Matching your subtle divider style */
+    width: 100%;
+    margin: 8px 0;
+}
+
+.extractedinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.extractedrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.centeralign {
+    align-items: center;
+}
+
+.extractedlabel {
+    font-size: 15px;
+    color: #36404D;
+  
+    margin: 0;
+}
+
+.extractedvalue {
+    font-size: 15px;
+    font-weight: 500;
+    color: #36404D;
+    margin: 0;
+}
+
+.extractedselect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 0.667px solid #E5E7EB; /* Matching your input border style */
+    border-radius: 12px;
+    padding: 8px 14px;
+    width: 90px;
+    cursor: pointer;
+        font-size: 16px;
+}
+
+.selectplaceholder {
+    font-size: 16px;
+    color: #36404D;
+   
+}
+
+.selecticon {
+    font-size: 16px;
+    color: #36404D;
+  
+}
