@@ -3,7 +3,7 @@ import "./FeatureCard.css";
 const  FeatureCard = (props) => {
     return (  
         <>
-          <div className='featurecard' style={{ width: props.width }}>
+          <div className='featurecard' style={{ width: props.width }} onClick={props.onClick}>
             <div className='forfirst22'>
 
                 <img src={props.image} alt="medication icon" />

@@ -29,7 +29,9 @@ setData(res.data[0]);
         
             <div className='onboarddiv'>
                 <div className='buttonholder'>
-<TextButton text="skip" />    
+ <Link to="/signup"  style={{ textDecoration: 'none' }}>
+                    
+<TextButton text="skip" />    </Link>   
             </div>
                 <img src={data.image} alt="onboarding" />
 

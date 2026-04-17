@@ -40,7 +40,7 @@ setData(res.data[0]);
 <img src={dots} alt="dots icon" />  
 <div className='dots'></div>
 
-                <Link to="/onboarding-6"  style={{ textDecoration: 'none' }}>
+                <Link to="/signup"  style={{ textDecoration: 'none' }}>
            <Button text={data.button2} />
                 </Link>
                                 <Link to="/login"  style={{ textDecoration: 'none' }}>

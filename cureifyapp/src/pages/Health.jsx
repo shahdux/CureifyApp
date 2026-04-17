@@ -1,34 +1,4 @@
-// import React, { Component, useState } from 'react';
-// import "./Reminder.css"
-// import SectionTitle from '../components/SectionTitle';
-// import FeatureCard from '../components/FeatureCard';
-// import f1 from '../assets/ai.svg';
-// import Button from './../components/Button';
-// import Counter from '../components/Counter';
-// import Toggle from '../components/Toggle';
-// import Navbar from '../components/Navbar';
-// import { Link } from 'react-router-dom';
-// import TextButton from '../components/TextButton';
 
-
-// const Health = () => {
-//     return ( <>
-//     <Navbar/>
-//     <div className='maindiv opadding gap26'>
-//     <SectionTitle title="Blood Test Insights" />
-//     <FeatureCard image={f1} name="Blood Test Comparison" des="Compare your blood tests with AI-powered insights to track changes."/>
-// <div className='titlewbutton'>
-//                     <p className='sectiontitle'>My Test Results</p>
-//                     <TextButton text="Add" color="#00A4AA" weight="700" />
-//                 </div>
-
-    
-//     </div>
-    
-//     </> );
-// }
- 
-// export default Health;
 import React, { Component, useState } from 'react';
 import "./Health.css"
 import SectionTitle from '../components/SectionTitle';
