@@ -30,6 +30,8 @@ const Home = () => {
     }, []);
 
     return (<>
+                <Navbar />
+
         <div className='maindiv'>
 
             <div className='profilewnot'>
@@ -104,7 +106,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <Navbar />
+            {/* <Navbar /> */}
         </div>
     </>);
 }

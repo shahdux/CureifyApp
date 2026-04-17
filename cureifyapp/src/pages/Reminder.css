@@ -10,7 +10,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 20px; /* 125% */
-
+margin: 0;
 text-align: center;
 }
 .inputsmallerwidth{
@@ -37,7 +37,8 @@ line-height: 20px; /* 111.111% */
     padding: 20px 0px;
 }
 .opadding{
-        padding: 60px 0px;
+      padding: 50px 0px 110px 0px;
+        height: auto;
 }
 .titlewinputbutton{
     display: flex;
@@ -45,9 +46,76 @@ line-height: 20px; /* 111.111% */
 height: 49.333px;
 align-items: center;
 gap: 81px;
-align-self: stretch;
 border-radius: 14px;
 border: 0.667px solid #E5E7EB;
-    width: 325px;
-    padding-left: 10px;
+    width: 335px;
+   justify-content: space-around;
+}
+.optiontext{
+    color: #000;
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+}
+
+.lw{
+    width: 335px;
+
+}
+.toggle-title{
+    color: #36404D;
+font-family: poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 111.111% */
+/* margin: 0; */
+}
+.toggle-desc{
+    color: rgba(54, 64, 77, 0.80);
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+width: 293px;
+margin: 0;
+}
+.togglecard{
+    display: flex;
+height: auto;
+    padding: 8px 0px 22px 0px;
+flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+border-radius: 14px;
+border: 0.667px solid #E5E7EB;
+background: #FFF;
+}
+.titlewtogbutton{
+    display: flex;
+    align-items: center;
+        width: 293px;
+        justify-content: space-between;
+}
+.w295{
+        width: 295px;
+}
+.conf{
+    color: #36404da0;
+font-family: poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 200;
+line-height: 20px; /* 142.857% */
+width: 290px;
+}
+.f14{
+        font-size: 14px;
+}
+.gap26{
+    gap: 26px
 }

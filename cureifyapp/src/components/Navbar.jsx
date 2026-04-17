@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return ( <>
+    <div className='nav-cont'>
+
     <div className='nav'>
 <img src={home} alt="home icon" />
 <Link to="/search">
@@ -27,6 +29,7 @@ const Navbar = () => {
 
     </div>
     
+    </div>
     
     
     

@@ -1,0 +1,28 @@
+
+.toggle {
+  width: 52px;
+  height: 30px;
+  background: #2e3748;
+  border-radius: 999px;
+  padding: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.25s;
+}
+
+.toggle--on {
+  background: #00A4AA;
+}
+
+.toggle__thumb {
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.25s;
+}
+
+.toggle--on .toggle__thumb {
+  transform: translateX(22px);
+}
