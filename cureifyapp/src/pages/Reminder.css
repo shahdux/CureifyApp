@@ -1,0 +1,53 @@
+.inputwtext{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.pills{
+    color: #000;
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 125% */
+
+text-align: center;
+}
+.inputsmallerwidth{
+    width: 56px;
+    display: flex;
+width: 56px;
+height: 29px;
+padding-left: 10px;
+justify-content: center;
+align-items: center;
+border-radius: 4px;
+border: 0.667px solid #E5E7EB;
+}
+.inputtile{
+    color: #36404D;
+font-family: poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 111.111% */
+}
+.hauto{
+    height: auto;
+    padding: 20px 0px;
+}
+.opadding{
+        padding: 60px 0px;
+}
+.titlewinputbutton{
+    display: flex;
+    display: flex;
+height: 49.333px;
+align-items: center;
+gap: 81px;
+align-self: stretch;
+border-radius: 14px;
+border: 0.667px solid #E5E7EB;
+    width: 325px;
+    padding-left: 10px;
+}

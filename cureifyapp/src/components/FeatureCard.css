@@ -1,0 +1,36 @@
+.featurecard{
+ display: flex;
+    width: 355px;
+height: 81.333px;
+align-items: center;
+gap: 16px;
+align-items: center;
+    padding-left: 20px;
+border-radius: 16px;
+border-radius: 20px;
+background: linear-gradient(90deg, #00A4AA 0%, #004244 100%);
+}          
+.featuretitle{
+    color: #FFF;
+font-family: Arial;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 27px; /* 150% */
+margin: 0;
+}
+.featuredes{
+    color: #EFF6FF;
+        width: 187px;
+font-family: Arial;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+margin: 0;
+}
+.forfirst22{
+    display: flex;
+   width: 260px;
+   gap: 12px;
+}

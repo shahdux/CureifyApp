@@ -1,0 +1,26 @@
+import React, { Component } from 'react';
+import "./FeatureCard.css";
+const  FeatureCard = (props) => {
+    return (  
+        <>
+          <div className='featurecard' style={{ width: props.width }}>
+            <div className='forfirst22'>
+
+                <img src={props.image} alt="medication icon" />
+
+            <div className='medcardInfo '>
+                <p className='featuretitle'>{props.name}</p>
+                               <p className='featuredes'>{props.des}</p>
+
+            </div>
+            </div>
+
+          
+        </div>
+        
+        
+        </>
+    );
+}
+ 
+export default  FeatureCard;

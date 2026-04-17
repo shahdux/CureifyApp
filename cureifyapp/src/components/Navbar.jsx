@@ -16,7 +16,10 @@ const Navbar = () => {
 <img src={search} alt="home icon" />
 </Link>
 <div className='circle'>
+    <Link to="/add-reminder">
+
 <img src={add} alt="home icon" />
+</Link>
 
 </div>
 <img src={bag} alt="home icon" />

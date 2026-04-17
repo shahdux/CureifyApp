@@ -3,8 +3,8 @@ import "./MedicineCard.css"
 
 const MedicineCard = (props) => {
     return (
-        <div className='medcard'>
-            <div className='forfirst2'>
+        <div className='medcard' style={{ width: props.width1 }}>
+            <div className='forfirst2' style={{ width: props.width }}>
 
                 <img src={props.image} alt="medication icon" />
 
