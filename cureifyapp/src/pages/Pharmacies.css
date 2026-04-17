@@ -1,0 +1,19 @@
+
+.buttonwithdiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+        gap: 20px;
+        width: 375px;
+
+
+}
+    .titlewsubdes {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 8px;
+        margin-top: 30px;
+}

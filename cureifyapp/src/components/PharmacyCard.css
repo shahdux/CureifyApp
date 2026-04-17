@@ -1,0 +1,117 @@
+.pharmacycard {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 335px;
+}
+
+.pharmacycardtop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pharmacyname {
+    font-size: 18px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.pharmacyprice {
+    font-size: 16px;
+    font-weight: 600;
+    color: #00A4AA;
+    margin: 0;
+}
+
+.pharmacycardmid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pharmacystars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 20px;
+}
+
+.star {
+    color: #F5A623;
+}
+
+.starempty {
+    color: #E0E0E0;
+}
+
+.pharmacyratingnum {
+    font-size: 14px;
+    font-weight: 500;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pharmacyarrival {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.clockicon {
+    width: 16px;
+    height: 16px;
+}
+
+.pharmacyarrivaltext {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.pharmacycardbottom {
+    display: flex;
+    gap: 12px;
+}
+
+.pharmacydirectionsbtn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 999px;
+    border: 1.5px solid #00A4AA;
+    background: none;
+    color: #00A4AA;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.pharmacydirectionsbtn:hover {
+    background: rgba(0, 164, 170, 0.05);
+}
+
+.pharmacyaddcardbtn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 999px;
+    border: none;
+    background: #00A4AA;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.pharmacyaddcardbtn:hover {
+    background: #008f94;
+}

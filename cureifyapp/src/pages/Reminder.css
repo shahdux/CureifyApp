@@ -325,7 +325,7 @@ width: 290px;
 }
 
 .capture-btn-outer:active {
-    transform: scale(0.9); /* Slight press effect */
+    transform: scale(0.9); 
 }
 
 

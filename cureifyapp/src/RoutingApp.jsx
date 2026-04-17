@@ -16,6 +16,7 @@ import Cart from './pages/Cart';
 import Health from './pages/Health';
 import Extracted from './pages/Extracted';
 import ProductsExt from './pages/ProductsExt';
+import Pharmacies from './pages/Pharmacies';
 
 
 
@@ -37,6 +38,8 @@ const RoutingApp = () => {
 <Route path='/search' element={<Search />} />
 <Route path='/bag' element={<Cart />} />
 <Route path='/health' element={<Health />} />
+<Route path='/pharmacies' element={<Pharmacies />} />
+
 
 <Route path='/extracted' element={<Extracted />} />
 <Route path='/products-found' element={<ProductsExt />} />

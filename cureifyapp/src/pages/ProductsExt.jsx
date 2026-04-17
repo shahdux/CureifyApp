@@ -53,7 +53,7 @@ const ProductsExt = () => {
 
                    
                 
-              <Link to="/home" style={{ textDecoration: 'none' }}>
+              <Link to="/pharmacies" style={{ textDecoration: 'none' }}>
                                 <Button text="Select Pharmacy" />
                             </Link>
              </div>
