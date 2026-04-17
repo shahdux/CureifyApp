@@ -3,6 +3,7 @@ import "./Pharmacies.css"
 import Navbar from '../components/Navbar';
 import SectionTitle from '../components/SectionTitle';
 import back from '../assets/back.svg';
+import PharmacyCard from '../components/PharmacyCard';
 
 
 
@@ -21,6 +22,27 @@ const  Pharmacies = () => {
 
 </div>
 
+                </div>
+
+                <div className='forpharms'>
+                    <PharmacyCard
+    name="El Ezaby"
+    price={745}
+    rating={4.2}
+    arrival="10-20 min"
+/>
+<PharmacyCard
+    name="El Tarshouby"
+    price={747}
+    rating={4.2}
+    arrival="30-50 min"
+/>
+<PharmacyCard
+    name="Askar"
+    price={747}
+    rating={4.2}
+    arrival="60-70 min"
+/>
                 </div>
 
 
