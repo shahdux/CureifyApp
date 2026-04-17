@@ -12,6 +12,7 @@ import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 import Search from './pages/Search';
 import Reminder from './pages/Reminder';
+import Cart from './pages/Cart';
 
 
 
@@ -31,6 +32,8 @@ const RoutingApp = () => {
 <Route path='/signup' element={<SignUp />} />
 <Route path='/home' element={<Home />} />
 <Route path='/search' element={<Search />} />
+<Route path='/bag' element={<Cart />} />
+
 <Route path='/add-reminder' element={<Reminder />} />
 
 

@@ -1,0 +1,118 @@
+
+.cartcard {
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #36404D;
+  width: 81%;
+}
+
+.cartcardImage {
+  width: 90px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.cartcardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.cartcardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cartcardName {
+  font-size: 18px;
+  font-family: poppins;
+  font-weight: 600;
+  color: #36404D;
+  margin: 0;
+}
+
+.cartcardPharmacy {
+ color: #717182;
+font-family: poppins;
+margin: 0;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 117.647% */
+}
+
+.cartcardDelete {
+  background: #fff0f0;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trashIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.cartcardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.cartcardCounter {
+  display: flex;
+  align-items: center;
+  background: #2e3748;
+  border-radius: 999px;
+  padding: 6px 8px;
+  gap: 8px;
+}
+
+.cartcardBtn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.cartcardBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cartcardCount {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cartcardPrice {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00A4AA;
+  margin: 0;
+}
