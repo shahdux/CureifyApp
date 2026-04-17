@@ -7,6 +7,7 @@ import Button from './../components/Button';
 import Counter from '../components/Counter';
 import Toggle from '../components/Toggle';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router-dom';
 
 
 const Reminder = () => {
@@ -125,8 +126,9 @@ const Reminder = () => {
       </select>
     </div>
     </div>
-
+<Link to="/home" style={{ textDecoration: 'none' }}>
 <Button text="Add Reminder" width="335px"/>
+</Link>
     
 
   </div>
