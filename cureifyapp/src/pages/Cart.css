@@ -1,9 +1,12 @@
 .arrowwtitle{
     display: flex;
-    /* gap: 12px; */
     width: 375px;
         gap: 142px;
         align-items: center;
+}
+.pr{
+    position: relative;
+
 }
 
 

@@ -18,6 +18,7 @@ font-style: normal;
 font-weight: 700;
 line-height: 27px; /* 150% */
 margin: 0;
+width: 270px;
 }
 .featuredes{
     color: #EFF6FF;
@@ -28,9 +29,13 @@ font-style: normal;
 font-weight: 400;
 line-height: 20px; /* 142.857% */
 margin: 0;
+width: 270px;
 }
 .forfirst22{
     display: flex;
    width: 260px;
    gap: 12px;
+}
+.gap0{
+    gap: 0px;
 }

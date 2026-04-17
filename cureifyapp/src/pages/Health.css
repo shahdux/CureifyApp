@@ -1,0 +1,113 @@
+.testcard {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 349px;
+}
+
+.testcardtitle {
+    font-size: 17px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.testcarddate {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.calendaricon {
+    width: 15px;
+    height: 15px;
+}
+
+.testcardDateText {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 0;
+}
+
+.testcardrows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.testrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
+.testrow.normal {
+    background: #EDF7F7;
+}
+
+.testrow.elevated {
+    background: #FFF8E1;
+}
+
+.testrowleft {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.testrowname {
+    font-size: 14px;
+    font-weight: 500;
+    color: #36404D;
+    margin: 0;
+}
+
+.testrowstatus {
+    font-size: 12px;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 0;
+}
+
+.testrowright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.testrowvalue.normal {
+    font-size: 15px;
+    font-weight: 600;
+    color: #00A4AA;
+    margin: 0;
+}
+
+.testrowvalue.elevated {
+    font-size: 15px;
+    font-weight: 600;
+    color: #F0A500;
+    margin: 0;
+}
+
+.testrowunit {
+    font-size: 12px;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 0;
+}
+.forbloodtests {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.margintop0{
+    margin-top: 0;
+}

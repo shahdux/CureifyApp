@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import Reminder from './pages/Reminder';
 import Cart from './pages/Cart';
+import Health from './pages/Health';
 
 
 
@@ -33,6 +34,8 @@ const RoutingApp = () => {
 <Route path='/home' element={<Home />} />
 <Route path='/search' element={<Search />} />
 <Route path='/bag' element={<Cart />} />
+<Route path='/health' element={<Health />} />
+
 
 <Route path='/add-reminder' element={<Reminder />} />
 

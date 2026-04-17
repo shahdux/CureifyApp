@@ -8,6 +8,7 @@ import pic from '../assets/pic.svg';
 
 const  Search = () => {
     return (<>
+     <Navbar/>
             <div className='searchdiv'>
 <div className='titlewsub'>
     <p className='sectiontitle margin0 mar12'>Find Medicines Nearby</p>
@@ -26,7 +27,7 @@ const  Search = () => {
                                                 <p className='rtext f14px'>Uplaod Product Image</p>
                                             </div>
 </div>
-    <Navbar/>
+    {/* <Navbar/> */}
 </div>
     
     

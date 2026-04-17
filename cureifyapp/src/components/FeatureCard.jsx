@@ -8,7 +8,7 @@ const  FeatureCard = (props) => {
 
                 <img src={props.image} alt="medication icon" />
 
-            <div className='medcardInfo '>
+            <div className='medcardInfo gap0'>
                 <p className='featuretitle'>{props.name}</p>
                                <p className='featuredes'>{props.des}</p>
 

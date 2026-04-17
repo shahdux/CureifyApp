@@ -64,7 +64,7 @@ const Cart = () => {
     return (
         <>
             <Navbar />
-            <div className='maindiv opadding gap26'>
+            <div className='maindiv opadding gap26 pr'>
                 <div className='arrowwtitle'>
                     <img src={back} alt="back icon" />
                     <SectionTitle title="Cart" />
