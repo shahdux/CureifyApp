@@ -82,6 +82,7 @@
 
 .pharmacydirectionsbtn {
     flex: 1;
+        width: 158px;
     padding: 12px;
     border-radius: 999px;
     border: 1.5px solid #00A4AA;
@@ -100,6 +101,7 @@
 
 .pharmacyaddcardbtn {
     flex: 1;
+        width: 158px;
     padding: 12px;
     border-radius: 999px;
     border: none;

@@ -1,5 +1,6 @@
 import "./PharmacyCard.css";
 import clock from '../assets/clock.svg';
+import { Link } from "react-router-dom";
 
 const PharmacyCard = (props) => {
     return (
@@ -26,7 +27,9 @@ const PharmacyCard = (props) => {
 
             <div className="pharmacycardbottom">
                 <button className="pharmacydirectionsbtn">Get Directions</button>
-                <button className="pharmacyaddcardbtn">Add to cart</button>
+                                            <Link to="/bag" style={{ textDecoration: 'none' }}>
+
+                <button className="pharmacyaddcardbtn">Add to cart</button></Link>
             </div>
         </div>
     );

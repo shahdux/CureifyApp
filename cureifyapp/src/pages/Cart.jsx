@@ -43,6 +43,7 @@ import SectionTitle from '../components/SectionTitle';
 import CartCard from '../components/CartCard';
 import { supabase } from '../supabase';
 import Button from '../components/Button';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const [loading, setLoading] = useState(true);
@@ -66,7 +67,9 @@ const Cart = () => {
             <Navbar />
             <div className='maindiv opadding gap26 pr'>
                 <div className='arrowwtitle'>
-                    <img src={back} alt="back icon" />
+                                                      <Link to="/pharmacies" style={{ textDecoration: 'none' }}>
+
+                    <img src={back} alt="back icon" /></Link>
                     <SectionTitle title="Cart" />
                 </div>
 
@@ -106,8 +109,9 @@ const Cart = () => {
                         <p className='summaryvaluebold'>745 EGP</p>
                     </div>
                 </div>
+                                  <Link to="/checkout" style={{ textDecoration: 'none' }}>
 
-<Button text="Proceed to Checkout"/>
+<Button text="Proceed to Checkout"/></Link>
             
 
 

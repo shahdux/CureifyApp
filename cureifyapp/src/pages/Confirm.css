@@ -1,0 +1,128 @@
+
+.orderplacedpage {
+    display: flex;
+    width: 415px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 60px 20px 50px 20px;
+        background: linear-gradient(180deg, #FBFAF7 0%, #F1F8FF 100%);
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.orderplacedcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+}
+
+.checkcirlce {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #C8F0DC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.checkinnercirlce {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #8FDDB8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderplacedtitle {
+    font-size: 26px;
+    font-weight: 700;
+    color: #36404D;
+    margin: 0;
+    text-align: center;
+}
+
+.orderplaceddes {
+    font-size: 15px;
+    font-weight: 400;
+    color: #36404D;
+    opacity: 0.7;
+    margin: 0;
+    text-align: center;
+}
+
+.orderinfocard {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    width: 100%;
+    max-width: 335px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.orderinforow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.orderinfoicon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.deliveryicon {
+    background: #E0EFFB;
+}
+
+.boxicon {
+    background: #E8E8FB;
+}
+
+.infosvg {
+    width: 22px;
+    height: 22px;
+}
+
+.orderinfotext {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.orderinfolabel {
+    font-size: 11px;
+    font-weight: 500;
+    color: #36404D;
+    opacity: 0.5;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.orderinfovalue {
+    font-size: 15px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.orderinfodivider {
+    height: 0.5px;
+    background: #E5E7EB;
+}

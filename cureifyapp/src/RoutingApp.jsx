@@ -17,6 +17,9 @@ import Health from './pages/Health';
 import Extracted from './pages/Extracted';
 import ProductsExt from './pages/ProductsExt';
 import Pharmacies from './pages/Pharmacies';
+import Checkout from './pages/Checkout';
+import Confirm from './pages/Confirm';
+
 
 
 
@@ -39,6 +42,10 @@ const RoutingApp = () => {
 <Route path='/bag' element={<Cart />} />
 <Route path='/health' element={<Health />} />
 <Route path='/pharmacies' element={<Pharmacies />} />
+<Route path='/checkout' element={<Checkout />} />
+<Route path='/confirm' element={<Confirm />} />
+
+
 
 
 <Route path='/extracted' element={<Extracted />} />
