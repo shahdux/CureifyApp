@@ -285,7 +285,7 @@ width: 290px;
 }
 
 .processing-text {
-    color: #00A4AA;
+    color: #ffffff;
     font-weight: bold;
     margin-top: 20px;
     font-size: 22px;
@@ -296,7 +296,7 @@ width: 290px;
 .scanning-bar {
     width: 280px;
     height: 4px;
-    background: #00A4AA;
+    background: #ffffff;
     position: absolute;
     top: 30%;
     left: 50%;
