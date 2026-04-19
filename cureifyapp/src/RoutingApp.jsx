@@ -24,6 +24,7 @@ import Progress1 from './pages/Progress1';
 import Progress2 from './pages/Progress2';
 import Progress3 from './pages/Progress3';
 import Profile from './pages/Profile';
+import PersonalInfo from './pages/PersonalInfo';
 
 
 
@@ -68,9 +69,9 @@ const RoutingApp = () => {
             <Route path='/progress-missed' element={<Progress3 />} />
             <Route path='/profile' element={<Profile />} />
 
-            {/* <Route path='/rewards' element={<Rewards />} />
+            {/* <Route path='/rewards' element={<Rewards />} /> */}
 <Route path='/personal-info' element={<PersonalInfo />} />
-<Route path='/notification-settings' element={<NotificationSettings />} />
+{/* <Route path='/notification-settings' element={<NotificationSettings />} />
 <Route path='/prescription-history' element={<PrescriptionHistory />} />
 <Route path='/blood-test-history' element={<BloodTestHistory />} />
 <Route path='/language' element={<Language />}  */}

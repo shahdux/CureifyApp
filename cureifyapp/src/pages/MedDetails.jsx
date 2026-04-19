@@ -18,11 +18,11 @@ const  MedDetails = () => {
     return (<>
      <Navbar/>
             <div className='searchdiv opadding'>
-                <div className='buttonwithdiv'>
+                <div className='arrowwtitle gap0'>
 <img src={back} alt="back icon" />
 
 
-    <SectionTitle title="Today's Medication"/>
+    <SectionTitle title="Today's Medication" margin="0 auto" align="center"/>
 
 
                 </div>
