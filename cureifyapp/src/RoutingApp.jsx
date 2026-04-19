@@ -29,6 +29,7 @@ import BloodTestHistory from './pages/BloodTestHistory';
 import PrescriptionHistory from './pages/PrescriptionHistory';
 import NotificationSettings from './pages/NotificationSettings';
 import Notifications from './pages/Notifcations';
+import Rewards from './pages/Rewards';
 
 
 
@@ -73,7 +74,7 @@ const RoutingApp = () => {
             <Route path='/progress-missed' element={<Progress3 />} />
             <Route path='/profile' element={<Profile />} />
 
-            {/* <Route path='/rewards' element={<Rewards />} /> */}
+            <Route path='/rewards' element={<Rewards />} />
 <Route path='/personal-info' element={<PersonalInfo />} />
 <Route path='/notification-settings' element={<NotificationSettings />} />
 
