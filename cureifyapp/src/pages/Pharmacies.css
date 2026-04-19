@@ -33,3 +33,118 @@
 .blackte{
     color:#000 ;
 }
+.alternativewarning {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.7;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    width: 375px;
+}
+
+.alternativepharmcard {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.667px solid #E5E7EB;
+    padding: 16px;
+    width: 375px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.alternativecountrow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alternativeaddcartbtn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 999px;
+    border: none;
+    background: #00A4AA;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.alternativesectionlabel {
+    font-size: 17px;
+    font-weight: 700;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    width: 375px;
+}
+
+.alternativesuggcard {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.667px solid #E5E7EB;
+    padding: 16px;
+    width: 375px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.alternativesuggtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #36404D;
+    margin: 0;
+}
+
+.alternativesuggdes {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 0;
+    line-height: 18px;
+}
+
+.alternativesuggbtns {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.alternativecallbtn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 999px;
+    border: 1.5px solid #00A4AA;
+    background: none;
+    color: #00A4AA;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.alternativeaddcartbtn2 {
+    flex: 1;
+    padding: 12px;
+    border-radius: 999px;
+    border: none;
+    background: #00A4AA;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+.w166{
+    width: 166px;
+    
+}
+.tac2{
+    text-align: center;
+}

@@ -335,7 +335,15 @@ width: 290px;
     background: #ffffff;
     border-radius: 50%;
 }
-.bg2{
+/* .bg2{
      background-image: url('../assets/img2.png');
 
+} */
+ .bg-rx {
+     background-image:  url('../assets/altern.png');
+}
+
+
+.bg-product {
+    background-image:  url('../assets/img2.png');
 }

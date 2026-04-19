@@ -33,6 +33,7 @@ import Rewards from './pages/Rewards';
 import RewardDetails from './pages/RewardDetails';
 import Redeemed from './pages/Redeemed';
 import TestResults from './pages/TestResults';
+import Alternative from './pages/Alternative';
 
 
 
@@ -90,6 +91,8 @@ const RoutingApp = () => {
 
 <Route path='/redeemed' element={<Redeemed />} />
 <Route path='/test-results' element={<TestResults />} />
+<Route path='/alternative' element={<Alternative />} />
+
 
    
 
