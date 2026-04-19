@@ -111,3 +111,151 @@
 .margintop0{
     margin-top: 0;
 }
+
+.comparisonsheet {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.comparisonSheettitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #36404D;
+    margin: 0;
+    text-align: center;
+}
+
+.comparisonsheetdes {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 0;
+    text-align: center;
+}
+
+.uploadbox {
+    border: 1.5px dashed #00A4AA;
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    background: #F0FAFA;
+}
+
+.hiddeninput {
+    display: none;
+}
+
+.uploadboxtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.uploadboxdes {
+    font-size: 12px;
+    color: #36404D;
+    opacity: 0.5;
+    margin: 0;
+    text-align: center;
+}
+
+.comparisonconfirmbtn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 999px;
+    border: none;
+    background: #E5E7EB;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: not-allowed;
+}
+
+.comparisonconfirmbtn.active {
+    background: #00A4AA;
+    cursor: pointer;
+}
+
+.comparisonCancelbtn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 999px;
+    border: 1.5px solid #E5E7EB;
+    background: none;
+    color: #36404D;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.loadingoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 415px;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loadingcard {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 280px;
+}
+
+.loadingspinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #E5E7EB;
+    border-top: 4px solid #00A4AA;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loadingtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.loadingdes {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.6;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+.sheetoverlay2{
+align-items: center;
+}

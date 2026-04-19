@@ -1,0 +1,176 @@
+.healthsummarycard {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.667px solid #E5E7EB;
+    padding: 16px;
+    width: 375px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.healthsummarytitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.healthsummaryrow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.healthsummaryitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.healthsummarynum {
+    font-size: 18px;
+    font-weight: 700;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.healthsummarylabel {
+    font-size: 11px;
+    color: #36404D;
+    opacity: 0.6;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.aicomparisontitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    width: 375px;
+}
+
+.airesultgroup {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.667px solid #E5E7EB;
+    padding: 16px;
+    width: 375px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.airesultgrouptitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.airesultrow {
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.airesultrow.improved { background: #EDF7F7; }
+.airesultrow.attention { background: #FFF8E1; }
+
+.airesultrowtop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.airesultrowname {
+    font-size: 15px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.airesultrowright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.airesultrowvalue.improved {
+    font-size: 18px;
+    font-weight: 700;
+    color: #00A4AA;
+    margin: 0;
+}
+
+.airesultrowvalue.attention {
+    font-size: 18px;
+    font-weight: 700;
+    color: #F0A500;
+    margin: 0;
+}
+
+.airesultrowunit {
+    font-size: 11px;
+    color: #36404D;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.airesultrowstatus.improved {
+    font-size: 12px;
+    font-weight: 600;
+    color: #00A4AA;
+    margin: 0;
+}
+
+.airesultrowstatus.attention {
+    font-size: 12px;
+    font-weight: 600;
+    color: #F0A500;
+    margin: 0;
+}
+
+.airesultrowprev {
+    font-size: 12px;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 0;
+}
+
+.airesultrowdes {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.8;
+    margin: 0;
+    line-height: 18px;
+}
+
+.disclaimerbox {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 14px;
+    width: 375px;
+    box-sizing: border-box;
+}
+
+.disclaimertext {
+    font-size: 12px;
+    color: #36404D;
+    opacity: 0.7;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 18px;
+}
