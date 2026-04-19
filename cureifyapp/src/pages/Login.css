@@ -133,3 +133,10 @@ height: 13.417px;
 .martop3{
     padding-top: 12px;
 }
+
+.errormsg {
+    color: #E7000B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin: 0;
+}
