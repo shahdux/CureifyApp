@@ -1,0 +1,81 @@
+.rewarddetailshero {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.667px solid #E5E7EB;
+    padding: 24px 16px;
+    width: 375px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.rewarddetailsiconcirlce {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #1A56A4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.rewarddetailsgift {
+    border-radius: 22369600px;
+
+ box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+
+
+}
+
+.rewarddetailsname {
+    font-size: 18px;
+    font-weight: 700;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.rewarddetailsdes {
+    font-size: 14px;
+    color: #6B7280;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+.rewarddetailspoints {
+    font-size: 14px;
+    color: #6B7280;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.rewarddetailsterms {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rewarddetailstermstitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.rewarddetailstermsitem {
+    font-size: 14px;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.bold {
+    font-weight: 700;
+}

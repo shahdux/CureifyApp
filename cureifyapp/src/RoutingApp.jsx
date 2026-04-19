@@ -30,6 +30,8 @@ import PrescriptionHistory from './pages/PrescriptionHistory';
 import NotificationSettings from './pages/NotificationSettings';
 import Notifications from './pages/Notifcations';
 import Rewards from './pages/Rewards';
+import RewardDetails from './pages/RewardDetails';
+import Redeemed from './pages/Redeemed';
 
 
 
@@ -83,9 +85,9 @@ const RoutingApp = () => {
 <Route path='/prescription-history' element={<PrescriptionHistory />} />
 
 <Route path='/notifications' element={<Notifications />} />
+<Route path='/reward-details' element={<RewardDetails />} />
 
-
-
+<Route path='/redeemed' element={<Redeemed />} />
 
 
    

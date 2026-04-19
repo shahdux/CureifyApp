@@ -180,7 +180,7 @@
 }
 
 .rewardmoreneeded {
-    font-size: 11px;
+    font-size: 14px;
     color: #36404D;
     opacity: 0.5;
     font-family: 'Poppins', sans-serif;
@@ -257,7 +257,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+       width: 415px;
     height: 100%;
     background: rgba(0,0,0,0.4);
     display: flex;
@@ -328,6 +328,7 @@
     border: 1.5px dashed #00A4AA;
     border-radius: 12px;
     padding: 14px 20px;
+    background: #00a4aa1d;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -365,3 +366,11 @@
 
      height: 120px;
  } 
+ .viewwidth{
+    width: 100px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+ }
