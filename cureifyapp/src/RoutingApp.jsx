@@ -20,6 +20,7 @@ import Pharmacies from './pages/Pharmacies';
 import Checkout from './pages/Checkout';
 import Confirm from './pages/Confirm';
 import MedDetails from './pages/MedDetails';
+import Progress1 from './pages/Progress1';
 
 
 
@@ -58,6 +59,7 @@ const RoutingApp = () => {
 <Route path='/add-reminder' element={<Reminder />} />
 
 
+<Route path='/progress' element={<Progress1 />} />
 
 
 

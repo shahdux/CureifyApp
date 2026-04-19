@@ -45,6 +45,7 @@ const Home = () => {
                 </div>
                 <img src={notofications} alt="notifications icon" />
             </div>
+                                                <Link to="/progress"  style={{ textDecoration: 'none' }}>
 
             <div className='bluecard'>
                 <div className='amountwicon'>
@@ -62,7 +63,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+</Link>
             <div className='medicationsection'>
                 <div className='titlewbutton'>
                     <p className='sectiontitle'>Today's Medication</p>
