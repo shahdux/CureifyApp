@@ -25,6 +25,7 @@ import Progress2 from './pages/Progress2';
 import Progress3 from './pages/Progress3';
 import Profile from './pages/Profile';
 import PersonalInfo from './pages/PersonalInfo';
+import BloodTestHistory from './pages/BloodTestHistory';
 
 
 
@@ -73,8 +74,8 @@ const RoutingApp = () => {
 <Route path='/personal-info' element={<PersonalInfo />} />
 {/* <Route path='/notification-settings' element={<NotificationSettings />} />
 <Route path='/prescription-history' element={<PrescriptionHistory />} />
-<Route path='/blood-test-history' element={<BloodTestHistory />} />
-<Route path='/language' element={<Language />}  */}
+ */}
+ <Route path='/blood-test-history' element={<BloodTestHistory />} />
 
 
 

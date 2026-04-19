@@ -8,7 +8,7 @@ import person from '../assets/person.svg';
 import bell from '../assets/bell.svg';
 import prescription from '../assets/prescription.svg';
 import bloodtest from '../assets/bloodtest.svg';
-import language from '../assets/language.svg';
+// import language from '../assets/language.svg';
 import rewards from '../assets/rewards.svg';
 import arrow from '../assets/arrow.svg';
 
@@ -51,7 +51,7 @@ const Profile = () => {
                     <AccountCard image={bell} title="Notification Settings" to="/notification-settings" />
                     <AccountCard image={prescription} title="Prescription History" to="/prescription-history" />
                     <AccountCard image={bloodtest} title="Blood Test History" to="/blood-test-history" />
-                    <AccountCard image={language} title="Language" to="/language" />
+                    {/* <AccountCard image={language} title="Language" to="/language" /> */}
                 </div>
 
             </div>
