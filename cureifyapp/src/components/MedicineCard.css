@@ -88,3 +88,19 @@ font-weight: 400;
 line-height: 16px; /* 133.333% */
 margin: 0;
 }
+.medcardToggle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #E5E7EB;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.medcardToggleTaken {
+    border: 3px solid #00A4AA;
+    background: #00A4AA;
+    box-shadow: 0 0 0 3px #ffffff inset;
+}
