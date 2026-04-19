@@ -27,6 +27,7 @@ import Profile from './pages/Profile';
 import PersonalInfo from './pages/PersonalInfo';
 import BloodTestHistory from './pages/BloodTestHistory';
 import PrescriptionHistory from './pages/PrescriptionHistory';
+import NotificationSettings from './pages/NotificationSettings';
 
 
 
@@ -73,9 +74,9 @@ const RoutingApp = () => {
 
             {/* <Route path='/rewards' element={<Rewards />} /> */}
 <Route path='/personal-info' element={<PersonalInfo />} />
-{/* <Route path='/notification-settings' element={<NotificationSettings />} />
+<Route path='/notification-settings' element={<NotificationSettings />} />
 
- */}
+
  <Route path='/blood-test-history' element={<BloodTestHistory />} />
 <Route path='/prescription-history' element={<PrescriptionHistory />} />
 

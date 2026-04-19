@@ -1,0 +1,57 @@
+
+.notifgrouplabel {
+    font-size: 14px;
+    font-weight: 600;
+    color: #36404D;
+    opacity: 0.6;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    width: 375px;
+}
+
+.notifcard {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 0.667px solid #E5E7EB;
+    padding: 4px 14px;
+    width: 375px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.notifrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    gap: 12px;
+}
+
+.notifinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.notiftitle {
+    font-size: 15px;
+    font-weight: 500;
+    color: #36404D;
+    margin: 0;
+}
+
+.notifdes {
+    font-size: 12px;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 0;
+    line-height: 16px;
+}
+
+.notifdivider {
+    height: 0.667px;
+    background: #E5E7EB;
+}
