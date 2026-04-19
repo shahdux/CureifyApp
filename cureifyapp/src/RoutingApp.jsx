@@ -21,6 +21,8 @@ import Checkout from './pages/Checkout';
 import Confirm from './pages/Confirm';
 import MedDetails from './pages/MedDetails';
 import Progress1 from './pages/Progress1';
+import Progress2 from './pages/Progress2';
+import Progress3 from './pages/Progress3';
 
 
 
@@ -61,7 +63,8 @@ const RoutingApp = () => {
 
 <Route path='/progress' element={<Progress1 />} />
 
-
+<Route path='/progress-upcoming' element={<Progress2 />} />
+            <Route path='/progress-missed' element={<Progress3 />} />
 
 
 

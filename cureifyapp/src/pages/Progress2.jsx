@@ -1,6 +1,4 @@
-
-
-import React, { useState } from 'react';
+import React from 'react';
 import "./Progress1.css"
 import Navbar from '../components/Navbar';
 import back from '../assets/back.svg';
@@ -9,13 +7,11 @@ import { Link } from 'react-router-dom';
 import pil from '../assets/pillsg.svg';
 import SectionTitle from '../components/SectionTitle';
 
-
-const Progress1 = () => {
-
+const Progress2 = () => {
     return (
         <>
             <Navbar />
-            <div className='maindiv opadding gap26 height800px'>
+            <div className='maindiv opadding gap26  '>
                 <div className='arrowwtitle gap0'>
                     <Link to="/home" style={{ textDecoration: 'none' }}>
                         <img src={back} alt="back icon" />
@@ -33,7 +29,7 @@ const Progress1 = () => {
                                 strokeLinecap="round"
                                 transform="rotate(-90 60 60)"
                             />
-                            <circle cx="60" cy="60" r="45" fill="none" stroke="#00A63E " strokeWidth="14"
+                            <circle cx="60" cy="60" r="45" fill="none" stroke="#00A63E" strokeWidth="14"
                                 strokeDasharray="282.6"
                                 strokeDashoffset="188.4"
                                 strokeLinecap="round"
@@ -51,33 +47,59 @@ const Progress1 = () => {
                     <div className='progresschartright'>
                         <div className='progresslegendrow'>
                             <span className='progressdot redd'/>
+                                                <Link to="/progress-missed" style={{ textDecoration: 'none' }}>
+
                             <p className='progresslegendlabel'><span className='progresslegendnum'>1</span> missed</p>
+                            </Link>
                         </div>
                         <div className='progresslegendrow'>
                             <span className='progressdot greenn'/>
-                            <p className='progresslegendlabel'><span className='progresslegendnum'>1</span> Completed</p>
+                                                                            <Link to="/progress" style={{ textDecoration: 'none' }}>
+
+                            <p className='progresslegendlabel'><span className='progresslegendnum'>1</span> Completed</p></Link>
                         </div>
                         <div className='progresslegendrow'>
                             <span className='progressdot yelloww'/>
-                            <p className='progresslegendlabel'><span className='progresslegendnum'>3</span> Upcoming</p>
+                                                                                                        <Link to="/progress-upcoming" style={{ textDecoration: 'none' }}>
+
+                            <p className='progresslegendlabel'><span className='progresslegendnum'>3</span> Upcoming</p></Link>
                         </div>
                     </div>
                 </div>
 
-               <div className='progresstabs'>
+            <div className='progresstabs'>
     <Link to="/progress" style={{ textDecoration: 'none' }}>
-        <button className='progresstab progresstabactive'>Completed</button>
+        <button className='progresstab '>Completed</button>
     </Link>
     <Link to="/progress-upcoming" style={{ textDecoration: 'none' }}>
-        <button className='progresstab'>Upcoming</button>
+        <button className='progresstab progresstabactive'>Upcoming</button>
     </Link>
     <Link to="/progress-missed" style={{ textDecoration: 'none' }}>
         <button className='progresstab'>Missed</button>
     </Link>
 </div>
-
                 <MedicineCard2
-                image={pil}
+                    image={pil}
+                    name="Aspirin 100mg"
+                    tablets={1}
+                    frequency="Once daily"
+                    time="09:00 AM"
+                    remaining={25}
+                    total={30}
+                    duration="30 days"
+                />
+                <MedicineCard2
+                    image={pil}
+                    name="Aspirin 100mg"
+                    tablets={1}
+                    frequency="Once daily"
+                    time="09:00 AM"
+                    remaining={25}
+                    total={30}
+                    duration="30 days"
+                />
+                <MedicineCard2
+                    image={pil}
                     name="Aspirin 100mg"
                     tablets={1}
                     frequency="Once daily"
@@ -92,4 +114,4 @@ const Progress1 = () => {
     );
 }
 
-export default Progress1;
+export default Progress2;

@@ -1,6 +1,4 @@
-
-
-import React, { useState } from 'react';
+import React from 'react';
 import "./Progress1.css"
 import Navbar from '../components/Navbar';
 import back from '../assets/back.svg';
@@ -9,9 +7,7 @@ import { Link } from 'react-router-dom';
 import pil from '../assets/pillsg.svg';
 import SectionTitle from '../components/SectionTitle';
 
-
-const Progress1 = () => {
-
+const Progress3 = () => {
     return (
         <>
             <Navbar />
@@ -33,7 +29,7 @@ const Progress1 = () => {
                                 strokeLinecap="round"
                                 transform="rotate(-90 60 60)"
                             />
-                            <circle cx="60" cy="60" r="45" fill="none" stroke="#00A63E " strokeWidth="14"
+                            <circle cx="60" cy="60" r="45" fill="none" stroke="#00A63E" strokeWidth="14"
                                 strokeDasharray="282.6"
                                 strokeDashoffset="188.4"
                                 strokeLinecap="round"
@@ -64,32 +60,34 @@ const Progress1 = () => {
                     </div>
                 </div>
 
-               <div className='progresstabs'>
-    <Link to="/progress" style={{ textDecoration: 'none' }}>
-        <button className='progresstab progresstabactive'>Completed</button>
-    </Link>
-    <Link to="/progress-upcoming" style={{ textDecoration: 'none' }}>
-        <button className='progresstab'>Upcoming</button>
-    </Link>
-    <Link to="/progress-missed" style={{ textDecoration: 'none' }}>
-        <button className='progresstab'>Missed</button>
-    </Link>
-</div>
+              <div className='progresstabs'>
+                 <Link to="/progress" style={{ textDecoration: 'none' }}>
+                     <button className='progresstab '>Completed</button>
+                 </Link>
+                 <Link to="/progress-upcoming" style={{ textDecoration: 'none' }}>
+                     <button className='progresstab '>Upcoming</button>
+                 </Link>
+                 <Link to="/progress-missed" style={{ textDecoration: 'none' }}>
+                     <button className='progresstab progresstabactive'>Missed</button>
+                 </Link>
+             </div>
 
-                <MedicineCard2
-                image={pil}
-                    name="Aspirin 100mg"
-                    tablets={1}
-                    frequency="Once daily"
-                    time="09:00 AM"
-                    remaining={25}
-                    total={30}
-                    duration="30 days"
-                />
+                <div className='missedcard redbg'>
+                    <MedicineCard2
+                        image={pil}
+                        name="Aspirin 100mg"
+                        tablets={1}
+                        frequency="Once daily"
+                        time="09:00 AM"
+                        remaining={25}
+                        total={30}
+                        duration="30 days"
+                    />
+                </div>
 
             </div>
         </>
     );
 }
 
-export default Progress1;
+export default Progress3;

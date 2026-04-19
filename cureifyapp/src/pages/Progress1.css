@@ -98,3 +98,22 @@
     height: 680px;
     justify-content: start;
 }
+.progresstabred {
+    color: #D4183D;
+    border-bottom: 2.5px solid #D4183D;
+}
+
+.missedcard {
+    background: #FFF0F3;
+    border-radius: 16px;
+    padding: 2px;
+}
+
+.missedcard .medicinecard2name {
+    color: #D4183D;
+}
+.redbg{
+    background: #FEF2F2;
+
+
+}
