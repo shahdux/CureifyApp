@@ -29,7 +29,7 @@ setData(res.data[0]);
         
             <div className='onboarddiv'>
                 <div className='buttonholder'>
-                                    <Link to="/signup"  style={{ textDecoration: 'none' }}>
+                                    <Link to="/onboarding-6"  style={{ textDecoration: 'none' }}>
                     
 <TextButton text="skip" />    </Link>
             </div>
