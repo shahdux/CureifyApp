@@ -1,0 +1,142 @@
+
+.profiletop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileavatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profilename {
+    font-size: 20px;
+    font-weight: 700;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.profilestats {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 0.667px solid #E5E7EB;
+    width: 335px;
+    padding: 16px 0;
+}
+
+.profilestatcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 4px;
+}
+
+.profilestatvalue {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00A4AA;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.profilestatlabel {
+    font-size: 11px;
+    font-weight: 500;
+    color: #36404D;
+    opacity: 0.5;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.profilestatdivider {
+    width: 0.667px;
+    height: 40px;
+    background: #E5E7EB;
+}
+
+.rewardscard {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: linear-gradient(180deg, #0053AD 0%, #002247 100%);
+    border-radius: 16px;
+    padding: 16px;
+    width: 335px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.rewardsiconbox {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rewardsicon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.rewardsinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.rewardstitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.rewardsdes {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.rewardsarrow {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+.imgbgg{
+    border-radius: 22369600px;
+
+background: rgba(255, 255, 255, 0.00);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 8px 10px -6px rgba(0, 0, 0, 0.10);
+}
+.accountlabel {
+    font-size: 18px;
+    font-weight: 600;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    width: 335px;
+}
+
+.accountcards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

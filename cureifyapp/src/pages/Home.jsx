@@ -37,7 +37,10 @@ const Home = () => {
 
             <div className='profilewnot'>
                 <div className='profilpart'>
+                                                                    <Link to="/profile"  style={{ textDecoration: 'none' }}>
+
                     <img src={profile} alt="profile picture" />
+                    </Link>
                     <p className='name'>Hello, Badr!</p>
                     <div className='pointsdiv'>
                         <p className='points'>200 points</p>

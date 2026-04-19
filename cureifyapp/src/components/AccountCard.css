@@ -1,0 +1,39 @@
+
+.accountcard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 0.667px solid #E5E7EB;
+    padding: 16px;
+    width: 335px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.accountcardleft {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.accountcardicon {
+    width: 22px;
+    height: 22px;
+    opacity: 0.7;
+}
+
+.accountcardtitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: #36404D;
+    margin: 0;
+}
+
+.accountcardarrow {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+}
