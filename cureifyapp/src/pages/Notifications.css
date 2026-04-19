@@ -1,0 +1,80 @@
+
+.notifitemcard {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.667px solid #E5E7EB;
+    padding: 16px;
+    width: 375px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.notifitemicon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.bluenotif { background: #E0EFFB; }
+.rednotif { background: #FDECEA; }
+
+.notifitemsvg {
+    width: 22px;
+    height: 22px;
+}
+
+.notifitembody {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.notifitemtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.notifitemdes {
+    font-size: 15px;
+    color: #36404D;
+    margin: 0;
+    
+}
+
+.notifitemtime {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
+}
+
+.notifclock {
+    width: 13px;
+    height: 13px;
+}
+
+.notifitemtimetext {
+    font-size: 15px;
+    color: #36404D;
+    margin: 0;
+}
+
+.notifiteundot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #00A4AA;
+    flex-shrink: 0;
+    margin-top: 2px;
+}

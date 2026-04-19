@@ -28,6 +28,7 @@ import PersonalInfo from './pages/PersonalInfo';
 import BloodTestHistory from './pages/BloodTestHistory';
 import PrescriptionHistory from './pages/PrescriptionHistory';
 import NotificationSettings from './pages/NotificationSettings';
+import Notifications from './pages/Notifcations';
 
 
 
@@ -80,6 +81,7 @@ const RoutingApp = () => {
  <Route path='/blood-test-history' element={<BloodTestHistory />} />
 <Route path='/prescription-history' element={<PrescriptionHistory />} />
 
+<Route path='/notifications' element={<Notifications />} />
 
 
 

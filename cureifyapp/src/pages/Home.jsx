@@ -46,7 +46,9 @@ const Home = () => {
                         <p className='points'>200 points</p>
                     </div>
                 </div>
-                <img src={notofications} alt="notifications icon" />
+                                                                <Link to="/notifications"  style={{ textDecoration: 'none' }}>
+
+                <img src={notofications} alt="notifications icon" /></Link>
             </div>
                                                 <Link to="/progress"  style={{ textDecoration: 'none' }}>
 
