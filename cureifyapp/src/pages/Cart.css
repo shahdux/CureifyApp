@@ -104,3 +104,24 @@
    height: 595px;
        justify-content: flex-start;
 }
+.cg2{
+    width: 335px;
+    gap: 14px;
+}
+.editableinput {
+    font-size: 16px;
+    font-weight: 600;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-bottom: 1.5px solid #00A4AA;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    padding: 2px 0;
+}
+
+.editableinputdes {
+    font-size: 13px;
+    font-weight: 400;
+}

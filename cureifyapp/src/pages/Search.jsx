@@ -144,7 +144,7 @@ const Search = () => {
     const handleFileChange = (event) => {
         if (event.target.files && event.target.files[0]) {
             // Logic: Prescription -> Alternative | Product -> Products Found
-            const target = scanType === 'prescription' ? '/alternative' : '/products-found';
+            const target = scanType === 'prescription' ? '/extracted-prescription' : '/products-found';
             startAnalysisFlow(target);
         }
     };
@@ -152,7 +152,7 @@ const Search = () => {
     // Triggered when user takes a photo with simulated camera
     const capturePhoto = () => {
         // Logic: Prescription -> Alternative | Product -> Products Found
-        const target = scanType === 'prescription' ? '/alternative' : '/products-found';
+        const target = scanType === 'prescription' ? '/extracted-prescription' : '/products-found';
         startAnalysisFlow(target);
     };
 
