@@ -1,57 +1,51 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Pharmacies.css"
 import Navbar from '../components/Navbar';
 import SectionTitle from '../components/SectionTitle';
 import back from '../assets/back.svg';
 import PharmacyCard from '../components/PharmacyCard';
+import { supabase } from '../supabase';
 
+const Pharmacies = () => {
+    const [loading, setLoading] = useState(true);
+    const [pharmacies, setPharmacies] = useState("");
 
+    useEffect(() => {
+        async function fetchPharmacies() {
+            const res = await supabase.from("Pharmacies").select("*");
+            setPharmacies(res.data);
+            setLoading(false);
+        }
+        fetchPharmacies();
+    }, []);
 
+    if (loading) return <p>Loading...</p>;
 
-const  Pharmacies = () => {
-    return (<>
-     <Navbar/>
+    return (
+        <>
+            <Navbar/>
             <div className='searchdiv'>
                 <div className='buttonwithdiv'>
-<img src={back} alt="back icon" />
-
-
-<div className='titlewsubdes'>
-    <SectionTitle title="Available Pharmacies"/>
-        <p className='subtitles tac'>Medicine: Anuva 50mg</p>
-
-</div>
-
+                    <img src={back} alt="back icon" />
+                    <div className='titlewsubdes'>
+                        <SectionTitle title="Available Pharmacies"/>
+                        <p className='subtitles tac'>Medicine: Anuva 50mg</p>
+                    </div>
                 </div>
 
                 <div className='forpharms'>
-                    <PharmacyCard
-    name="El Ezaby"
-    price={745}
-    rating={4.2}
-    arrival="10-20 min"
-/>
-<PharmacyCard
-    name="El Tarshouby"
-    price={747}
-    rating={4.2}
-    arrival="30-50 min"
-/>
-<PharmacyCard
-    name="Askar"
-    price={747}
-    rating={4.2}
-    arrival="60-70 min"
-/>
+                    {pharmacies.map((pharmacy) => {
+                        return <PharmacyCard
+                            name={pharmacy.name}
+                            price={pharmacy.price}
+                            rating={pharmacy.rate}
+                            arrival={pharmacy.arrival}
+                        />
+                    })}
                 </div>
-
-
-</div>
-    
-    
-    
-    
-    </>  );
+            </div>
+        </>
+    );
 }
- 
-export default  Pharmacies;
+
+export default Pharmacies;
