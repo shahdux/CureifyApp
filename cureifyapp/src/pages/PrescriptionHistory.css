@@ -1,0 +1,77 @@
+
+.prescard {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 0.667px solid #E5E7EB;
+    padding: 14px;
+    width: 375px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.prescardtop {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.prescardicon {
+    width: 36px;
+    height: 36px;
+    opacity: 0.7;
+}
+
+.prescardinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.prescardtitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0;
+}
+
+.prescarddate {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.prescardatetext {
+    font-size: 14px;
+    color: #36404D;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.prescarddivider {
+    height: 0.667px;
+    background: #E5E7EB;
+}
+
+.prescardmeds {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.prescardmedslabel {
+    font-size: 16px;
+    font-weight: 500;
+    color: #36404D;
+    opacity: 0.6;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.prescardmeditem {
+    font-size: 14px;
+    color: #36404D;
+    margin: 0;
+}
