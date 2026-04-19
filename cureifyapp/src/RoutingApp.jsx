@@ -19,6 +19,7 @@ import ProductsExt from './pages/ProductsExt';
 import Pharmacies from './pages/Pharmacies';
 import Checkout from './pages/Checkout';
 import Confirm from './pages/Confirm';
+import MedDetails from './pages/MedDetails';
 
 
 
@@ -44,6 +45,8 @@ const RoutingApp = () => {
 <Route path='/pharmacies' element={<Pharmacies />} />
 <Route path='/checkout' element={<Checkout />} />
 <Route path='/confirm' element={<Confirm />} />
+<Route path='/med-details' element={<MedDetails />} />
+
 
 
 

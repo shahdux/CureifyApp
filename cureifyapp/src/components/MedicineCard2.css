@@ -1,0 +1,150 @@
+
+.medicinecard2 {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.667px solid #E5E7EB;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 335px;
+}
+
+.medicinecard2top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.medicinecard2iconbox {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #00A4AA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.medicinecard2pillicon {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+}
+
+.medicinecard2info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.medicinecard2name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #36404D;
+    margin: 0;
+}
+
+.medicinecard2dose {
+    font-size: 13px;
+    font-weight: 400;
+    color: #36404D;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.medicinecard2time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2px;
+}
+
+.medicinecard2clockicon {
+    width: 14px;
+    height: 14px;
+    opacity: 0.6;
+}
+
+.medicinecard2timetext {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.medicinecard2ar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.medicinecard2aricon {
+    width: 22px;
+    height: 22px;
+}
+
+.medicinecard2artext {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00A4AA;
+    margin: 0;
+}
+
+.medicinecard2pills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medicinecard2pillslabel {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.medicinecard2pillscount {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.medicinecard2progressbar {
+    width: 100%;
+    height: 8px;
+    background: #E5E7EB;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.medicinecard2progressfill {
+    height: 100%;
+    background: #2B4FD8;
+    border-radius: 999px;
+    transition: width 0.3s;
+}
+
+.medicinecard2duration {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.medicinecard2calicon {
+    width: 15px;
+    height: 15px;
+    opacity: 0.6;
+}
+
+.medicinecard2durationtext {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.7;
+    margin: 0;
+}

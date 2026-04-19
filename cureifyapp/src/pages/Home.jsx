@@ -12,6 +12,7 @@ import reo from '../assets/reo.svg';
 import TextButton from '../components/TextButton';
 import MedicineCard from '../components/MedicineCard';
 import { supabase } from './../supabase';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [meds, setMeds] = useState([]);
@@ -65,7 +66,9 @@ const Home = () => {
             <div className='medicationsection'>
                 <div className='titlewbutton'>
                     <p className='sectiontitle'>Today's Medication</p>
-                    <TextButton text="View details" color="#00A4AA" weight="700" />
+                                                <Link to="/med-details"  style={{ textDecoration: 'none' }}>
+
+                    <TextButton text="View details" color="#00A4AA" weight="700" /></Link>
                 </div>
                <div className='formedcards'>
   {meds.map((med, index) => (
