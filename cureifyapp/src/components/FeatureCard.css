@@ -9,6 +9,7 @@ align-items: center;
 border-radius: 16px;
 border-radius: 20px;
 background: linear-gradient(90deg, #00A4AA 0%, #004244 100%);
+box-shadow: 0 4px 16px 0 rgba(0, 69, 72, 0.52);
 }          
 .featuretitle{
     color: #FFF;

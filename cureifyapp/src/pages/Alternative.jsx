@@ -54,6 +54,8 @@ const Alternative = () => {
 
                 <div className='alternativesuggcard'>
                     <p className='alternativesuggtitle'>CeraVe Resurfacing Serum</p>
+                                        <p className='cartcardPharmacy'>📍 El Ezaby Pharmacy</p>
+
                     <p className='alternativesuggdes'>Similiar active ingredients. Consult with a pharmacist first.</p>
                     <div className='alternativesuggbtns'>
                         <button className='alternativecallbtn w166'>Call pharmacy</button>
