@@ -10,6 +10,7 @@ import bluep from '../assets/bluep.svg';
 
 import PharmacyCard from '../components/PharmacyCard';
 import MedicineCard2 from '../components/MedicineCard2';
+import { Link } from 'react-router-dom';
 
 
 
@@ -19,9 +20,11 @@ const  MedDetails = () => {
      <Navbar/>
             <div className='searchdiv opadding'>
                 <div className='arrowwtitle gap0'>
+ <Link to="/home"  style={{ textDecoration: 'none' }}>
+
 <img src={back} alt="back icon" />
 
-
+</Link>
     <SectionTitle title="Today's Medication" margin="0 auto" align="center"/>
 
 

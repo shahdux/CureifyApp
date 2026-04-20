@@ -108,10 +108,13 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                                                                                        <Link to="/bag"  style={{ textDecoration: 'none' }}>
+
                     <div className='reorder'>
                         <img src={reo} alt="re-order icon" />
                         <p className='rtext'>Re-order</p>
                     </div>
+                    </Link>
                 </div>
             </div>
 

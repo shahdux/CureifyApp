@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import "./Health.css"
 import SectionTitle from '../components/SectionTitle';
 import FeatureCard from '../components/FeatureCard';
@@ -14,6 +14,7 @@ const Health = () => {
     const [file2, setFile2] = useState(null);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const addFileRef = useRef(null);
 
     const handleConfirm = () => {
         if (!file1 || !file2) return;
@@ -34,7 +35,14 @@ const Health = () => {
                 <div className='forbloodtests2'>
                     <div className='titlewbutton'>
                         <p className='sectiontitle margintop0'>My Test Results</p>
-                        <TextButton text="Add" color="#00A4AA" weight="700" marginTop="0px" />
+                        <input
+                            type="file"
+                            accept=".pdf,image/*"
+                            className='hiddeninput'
+                            ref={addFileRef}
+                            onChange={(e) => console.log(e.target.files[0])}
+                        />
+                        <TextButton text="Add" color="#00A4AA" weight="700" marginTop="0px" onClick={() => addFileRef.current.click()}/>
                     </div>
 
                     <div className='forbloodtests'>

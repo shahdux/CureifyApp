@@ -10,7 +10,7 @@ const TextButton = (props) => {
                     color: props.color,
                     fontWeight: props.weight,
                     marginTop: props.marginTop
-                }}
+                }}onClick={props.onClick}
             >
                 {props.text}
             </p>
