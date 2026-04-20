@@ -1,17 +1,31 @@
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+// import RoutingApp from './RoutingApp';
+// import './index.css';
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <RoutingApp />
+//   </React.StrictMode>
+// );
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import RoutingApp from './RoutingApp';
 import './index.css';
-// import './index.css';
-// import App from './App';
-// import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <RoutingApp />
-  </React.StrictMode>
-);
+const startApp = () => {
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+    <React.StrictMode>
+      <RoutingApp />
+    </React.StrictMode>
+  );
+};
 
-
-// reportWebVitals();
+if (window.cordova) {
+  document.addEventListener('deviceready', startApp, false);
+} else {
+  startApp();
+}
