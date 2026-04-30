@@ -1,18 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "./Search.css"
 import Navbar from '../components/Navbar';
 import rx from '../assets/rx.svg';
 import pic from '../assets/pic.svg';
+import smalll from '../assets/smalllogo.svg';
 import { useNavigate } from 'react-router-dom';
 import { useLang } from '../context/LanguageContext';
+import { motion, AnimatePresence } from 'framer-motion'; 
 
 const Search = () => {
+    const [loading, setLoading] = useState(true);
     const [showSheet, setShowSheet] = useState(false);
     const [cameraMode, setCameraMode] = useState('closed');
     const [scanType, setScanType] = useState('');
     const navigate = useNavigate();
     const fileInputRef = useRef(null);
     const { isArabic } = useLang();
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 800);
+        return () => clearTimeout(timer);
+    }, []);
 
     const handlePrescriptionClick = () => { setScanType('prescription'); setShowSheet(true); };
     const handleProductClick = () => { setScanType('product'); setShowSheet(true); };
@@ -36,10 +44,21 @@ const Search = () => {
         setTimeout(() => { setCameraMode('closed'); navigate(targetPath); }, 2000);
     };
 
+    if (loading) return (
+        <div className="loader-container">
+            <img src={smalll} alt="loading" className="loader-logo" />
+        </div>
+    );
+
     return (
         <>
             <Navbar />
-            <div className='searchdiv'>
+            <motion.div 
+                className='searchdiv'
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
                 <div className='titlewsub'>
                     <p className='sectiontitle margin0 mar12'>
                         {isArabic ? "ابحث عن الأدوية القريبة" : "Find Medicines Nearby"}
@@ -52,38 +71,70 @@ const Search = () => {
                 <input type="text" className='searchinput' placeholder={isArabic ? "بحث" : "Search"} />
 
                 <div className='for2buttons2'>
-                    <div className='reorder width177 h48' onClick={handlePrescriptionClick} style={{ cursor: 'pointer' }}>
+                    <motion.div 
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className='reorder width177 h48' 
+                        onClick={handlePrescriptionClick} 
+                        style={{ cursor: 'pointer' }}
+                    >
                         <img src={rx} alt="rx icon" />
                         <p className='rtext f14px'>{isArabic ? "رفع وصفة طبية" : "Upload Prescription"}</p>
-                    </div>
-                    <div className='reorder width177 h48' onClick={handleProductClick} style={{ cursor: 'pointer' }}>
+                    </motion.div>
+                    
+                    <motion.div 
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className='reorder width177 h48' 
+                        onClick={handleProductClick} 
+                        style={{ cursor: 'pointer' }}
+                    >
                         <img src={pic} alt="product icon" />
                         <p className='rtext f14px'>{isArabic ? "رفع صورة المنتج" : "Upload Product Image"}</p>
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
 
             <input type="file" ref={fileInputRef} style={{ display: 'none' }} accept="image/*" onChange={handleFileChange} />
 
-            {showSheet && (
-                <div className='sheetoverlay' onClick={() => setShowSheet(false)}>
-                    <div className='sheetcontainer' onClick={(e) => e.stopPropagation()}>
-                        <div className='sheetcard'>
-                            <p className='sheettitle'>{isArabic ? "اختر المصدر" : "Select Source"}</p>
-                            <div className='sheetdivider' />
-                            <button className='sheetbtn' onClick={handleCameraClick}>{isArabic ? "الكاميرا" : "Camera"}</button>
-                            <div className='sheetdivider' />
-                            <button className='sheetbtn' onClick={handleGalleryClick}>{isArabic ? "المعرض" : "Gallery"}</button>
-                        </div>
-                        <div className='sheetcancelcard'>
-                            <button className='sheetcancelbtn' onClick={() => setShowSheet(false)}>{isArabic ? "إلغاء" : "Cancel"}</button>
-                        </div>
-                    </div>
-                </div>
-            )}
+            <AnimatePresence>
+                {showSheet && (
+                    <motion.div 
+                        className='sheetoverlay' 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setShowSheet(false)}
+                    >
+                        <motion.div 
+                            className='sheetcontainer' 
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            exit={{ y: "100%" }}
+                            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className='sheetcard'>
+                                <p className='sheettitle'>{isArabic ? "اختر المصدر" : "Select Source"}</p>
+                                <div className='sheetdivider' />
+                                <button className='sheetbtn' onClick={handleCameraClick}>{isArabic ? "الكاميرا" : "Camera"}</button>
+                                <div className='sheetdivider' />
+                                <button className='sheetbtn' onClick={handleGalleryClick}>{isArabic ? "المعرض" : "Gallery"}</button>
+                            </div>
+                            <div className='sheetcancelcard'>
+                                <button className='sheetcancelbtn' onClick={() => setShowSheet(false)}>{isArabic ? "إلغاء" : "Cancel"}</button>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {cameraMode === 'viewfinder' && (
-                <div className="camera-sim-overlay">
+                <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="camera-sim-overlay"
+                >
                     <div className="viewfinder">
                         <div className="scan-focus-box">
                             <div className="corner tl"></div>
@@ -95,19 +146,27 @@ const Search = () => {
                             {isArabic ? `ضع ${scanType === 'prescription' ? 'الوصفة' : 'المنتج'} داخل الإطار` : `Align ${scanType} within the frame`}
                         </p>
                         <div className="camera-controls">
-                            <div className="capture-btn-outer" onClick={capturePhoto}>
+                            <motion.div 
+                                whileTap={{ scale: 0.9 }}
+                                className="capture-btn-outer" 
+                                onClick={capturePhoto}
+                            >
                                 <div className="capture-btn-inner"></div>
-                            </div>
+                            </motion.div>
                             <button className="close-cam" onClick={() => setCameraMode('closed')}>{isArabic ? "إلغاء" : "Cancel"}</button>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             )}
 
             {cameraMode === 'captured' && (
                 <div className={`camera-sim-overlay captured-bg ${scanType === 'prescription' ? 'bg-rx' : 'bg-product'}`}>
                     <div className="captured-content">
-                        <div className="scanning-bar"></div>
+                        <motion.div 
+                            className="scanning-bar"
+                            animate={{ top: ["0%", "100%", "0%"] }}
+                            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                        ></motion.div>
                         <p className="processing-text">
                             {isArabic ? `جارٍ تحليل ${scanType === 'prescription' ? 'الوصفة' : 'المنتج'}...` : `Analyzing ${scanType}...`}
                         </p>
