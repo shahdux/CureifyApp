@@ -1,102 +1,33 @@
-// // import React, { Component } from 'react';
-// // import "./Pharmacies.css"
-// // import Navbar from '../components/Navbar';
-// // import SectionTitle from '../components/SectionTitle';
-// // import back from '../assets/back.svg';
-// // import pil from '../assets/pillsg.svg';
-// // import greyp from '../assets/greyp.svg';
-// // import bluep from '../assets/bluep.svg';
-
-
-// // import PharmacyCard from '../components/PharmacyCard';
-// // import MedicineCard2 from '../components/MedicineCard2';
-// // import { Link } from 'react-router-dom';
-
-
-
-
-// // const  MedDetails = () => {
-// //     return (<>
-// //      <Navbar/>
-// //             <div className='searchdiv opadding'>
-// //                 <div className='arrowwtitle gap0'>
-// //  <Link to="/home"  style={{ textDecoration: 'none' }}>
-
-// // <img src={back} alt="back icon" />
-
-// // </Link>
-// //     <SectionTitle title="Today's Medication" margin="0 auto" align="center"/>
-
-
-// //                 </div>
-
-// //                 <div className='forpharms'>
-// //                  <MedicineCard2
-// //                  image={pil}
-// //     name="Vibramycin 500mg"
-// //     tablets={1}
-// //     frequency="Twice daily"
-// //     time="09:00 AM"
-// //     remaining={18}
-// //     total={30}
-// //     duration="15 days"
-// // />
-// // <MedicineCard2
-// //                  image={greyp}
-
-// //     name="Sebionex Trio"
-// //     tablets={1}
-// //     frequency="Once daily"
-// //     time="02:00 PM"
-// //     remaining={10}
-// //     total={30}
-// //     duration="30 days"
-// // />
-// // <MedicineCard2
-// //                  image={bluep}
-
-// //     name="Adapalene Gel"
-// //     tablets={1}
-// //     frequency="Once daily"
-// //     time="02:00 PM"
-// //     remaining={22}
-// //     total={30}
-// //     duration="30 days"
-// // />
-// //                 </div>
-
-
-// // </div>
-    
-    
-    
-    
-// //     </>  );
-// // }
- 
-// // export default  MedDetails;
-
 // import React, { useState, useEffect } from 'react';
 // import "./Pharmacies.css"
 // import Navbar from '../components/Navbar';
 // import SectionTitle from '../components/SectionTitle';
 // import back from '../assets/back.svg';
-// import pil from '../assets/pillsg.svg';
-// import greyp from '../assets/greyp.svg';
-// import bluep from '../assets/bluep.svg';
 // import smalll from '../assets/smalllogo.svg';
 // import MedicineCard2 from '../components/MedicineCard2';
 // import { Link } from 'react-router-dom';
 // import { useLang } from '../context/LanguageContext';
 // import { motion } from 'framer-motion';
+// import { supabase } from './../supabase';
 
 // const MedDetails = () => {
 //     const { isArabic } = useLang();
+//     const [meds, setMeds] = useState([]);
 //     const [loading, setLoading] = useState(true);
 
 //     useEffect(() => {
-//         const timer = setTimeout(() => setLoading(false), 800);
-//         return () => clearTimeout(timer);
+//         async function fetchMeds() {
+//             const res = await supabase
+//                 .from('Users')
+//                 .select('meds')
+//                 .eq('id', 4); //
+
+//             if (res.data?.[0]?.meds) {
+//                 setMeds(res.data[0].meds);
+//             }
+//             setLoading(false);
+//         }
+//         fetchMeds();
 //     }, []);
 
 //     if (loading) return (
@@ -115,42 +46,33 @@
 //             >
 //                 <div className='arrowwtitle gap0'>
 //                     <Link to="/home" style={{ textDecoration: 'none' }}>
-//                         <img src={back} alt="back icon" style={{ transform: isArabic ? 'rotate(180deg)' : 'none' }} />
+//                         <img 
+//                             src={back} 
+//                             alt="back icon" 
+//                             style={{ transform: isArabic ? 'rotate(180deg)' : 'none' }} 
+//                         />
 //                     </Link>
-//                     <SectionTitle title={isArabic ? "أدوية اليوم" : "Today's Medication"} margin="0 auto" align="center" />
+//                     <SectionTitle 
+//                         title={isArabic ? "أدوية اليوم" : "Today's Medication"} 
+//                         margin="0 auto" 
+//                         align="center" 
+//                     />
 //                 </div>
 
 //                 <div className='forpharms'>
-//                     <MedicineCard2
-//                         image={pil}
-//                         name="Vibramycin 500mg"
-//                         tablets={1}
-//                         frequency={isArabic ? "مرتين يومياً" : "Twice daily"}
-//                         time="09:00 AM"
-//                         remaining={18}
-//                         total={30}
-//                         duration={isArabic ? "١٥ يوم" : "15 days"}
-//                     />
-//                     <MedicineCard2
-//                         image={greyp}
-//                         name="Sebionex Trio"
-//                         tablets={1}
-//                         frequency={isArabic ? "مرة يومياً" : "Once daily"}
-//                         time="02:00 PM"
-//                         remaining={10}
-//                         total={30}
-//                         duration={isArabic ? "٣٠ يوم" : "30 days"}
-//                     />
-//                     <MedicineCard2
-//                         image={bluep}
-//                         name="Adapalene Gel"
-//                         tablets={1}
-//                         frequency={isArabic ? "مرة يومياً" : "Once daily"}
-//                         time="02:00 PM"
-//                         remaining={22}
-//                         total={30}
-//                         duration={isArabic ? "٣٠ يوم" : "30 days"}
-//                     />
+//                     {meds.map((med, index) => (
+//                         <MedicineCard2
+//                             key={index}
+//                             image={med.image}
+//                             name={med.dosage ? `${med.name} ${med.dosage}` : med.name}
+//                             tablets={1} 
+//                             frequency={isArabic ? med.freqAr : med.freqEn}
+//                             time={med.time}
+//                             remaining={med.remaining}
+//                             total={med.total}
+//                             duration={isArabic ? med.durAr : med.durEn}
+//                         />
+//                     ))}
 //                 </div>
 //             </motion.div>
 //         </>
@@ -182,7 +104,7 @@ const MedDetails = () => {
             const res = await supabase
                 .from('Users')
                 .select('meds')
-                .eq('id', 4); //
+                .eq('id', 4);
 
             if (res.data?.[0]?.meds) {
                 setMeds(res.data[0].meds);

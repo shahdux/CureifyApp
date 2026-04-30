@@ -148,3 +148,22 @@
     opacity: 0.7;
     margin: 0;
 }
+.medicinecard2progressbar {
+    width: 100%;
+    height: 8px;
+    background-color: #f0f4f8; 
+    border-radius: 10px;
+    margin:0;
+    overflow: hidden;
+}
+
+.medicinecard2progressfill {
+    height: 100%;
+    background-color: #0056b3;
+    border-radius: 10px;
+    transition: width 0.4s ease-in-out; 
+}
+
+.medicinecard2progressfill {
+    background: linear-gradient(90deg, #004a99 0%, #0066cc 100%);
+}

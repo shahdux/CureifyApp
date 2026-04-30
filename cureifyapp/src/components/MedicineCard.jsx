@@ -4,6 +4,13 @@ import "./MedicineCard.css"
 const MedicineCard = (props) => {
     const [taken, setTaken] = useState(false);
 
+    const handleToggle = () => {
+        if (!taken && props.onTake) {
+            props.onTake();
+        }
+        setTaken(prev => !prev);
+    }
+
     return (
         <div className='medcard' style={{ width: props.width1 }}>
             <div className='forfirst2' style={{ width: props.width }}>
@@ -20,7 +27,7 @@ const MedicineCard = (props) => {
 
             <button
                 className={`medcardToggle ${taken ? 'medcardToggleTaken' : ''}`}
-                onClick={() => setTaken(t => !t)}
+                onClick={handleToggle}
             />
         </div>
     );
