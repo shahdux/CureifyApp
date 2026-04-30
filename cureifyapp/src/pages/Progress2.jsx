@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import SectionTitle from '../components/SectionTitle';
 import smalll from '../assets/smalllogo.svg';
 import { useLang } from '../context/LanguageContext';
-import { supabase } from './../supabase'; // Import supabase
+import { supabase } from './../supabase'; 
 
 const fadeUp = { hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0 } };
 const vp = { once: true, amount: 0.2 };
@@ -16,14 +16,14 @@ const vp = { once: true, amount: 0.2 };
 const Progress2 = () => {
     const { isArabic } = useLang();
     const [loading, setLoading] = useState(true);
-    const [meds, setMeds] = useState([]); // State to hold your dynamic meds
+    const [meds, setMeds] = useState([]); 
 
     useEffect(() => {
         async function fetchMeds() {
             const res = await supabase
                 .from('Users')
                 .select('meds')
-                .eq('id', 4); // Match the ID used in MedDetails
+                .eq('id', 4); 
 
             if (res.data?.[0]?.meds) {
                 setMeds(res.data[0].meds);
@@ -54,7 +54,6 @@ const Progress2 = () => {
                     <SectionTitle title={isArabic ? "تقدمك" : "Your Progress"} margin="0 auto" align="center"/>
                 </div>
 
-                {/* Progress Chart Card */}
                 <motion.div className='progresschartcard' variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6 }} viewport={vp}>
                     <div className='donutwrapper'>
                         <svg viewBox="0 0 120 120" className='donutsvg'>
@@ -87,7 +86,6 @@ const Progress2 = () => {
                     </div>
                 </motion.div>
 
-                {/* Tabs */}
                 <motion.div className='progresstabs' variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.1 }} viewport={vp}>
                     <Link to="/progress" style={{ textDecoration: 'none' }}>
                         <button className='progresstab'>{isArabic ? "مكتملة" : "Completed"}</button>
@@ -100,7 +98,6 @@ const Progress2 = () => {
                     </Link>
                 </motion.div>
 
-                {/* Dynamic Medicine Cards */}
                 {meds.map((med, index) => (
                     <motion.div 
                         key={index} 
