@@ -6,10 +6,15 @@ import dots from '../assets/dots1.svg';
 import Button from '../components/Button';
 import TextButton from '../components/TextButton';
 import { Link } from 'react-router-dom';
+import smalll from '../assets/smalllogo.svg';
+
 
 const Onboarding1 = () => 
     {
+            const [loading, setLoading] = useState(true);
+
     const [data, setData] = useState("");
+     
 
     useEffect(() => {
         async function getOnboarding() {
@@ -19,11 +24,16 @@ const Onboarding1 = () =>
     .eq("id", 1);
 
 setData(res.data[0]);
+setLoading(false);
         }
         getOnboarding();
     }, []);
 
-
+ if (loading) return (
+        <div className="loader-container">
+            <img src={smalll} alt="loading" className="loader-logo" />
+        </div>
+    );
     return (
         <>
         
