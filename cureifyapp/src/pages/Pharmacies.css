@@ -148,3 +148,43 @@
 .tac2{
     text-align: center;
 }
+.languageitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    cursor: pointer;
+    background: #ffffff;
+    transition: background 0.15s ease;
+    border-bottom: 0.667px solid #E5E7EB;
+}
+
+.languageitem:active {
+    background: #f5fafa;
+}
+
+.languageitemtext {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.languageitemname {
+    font-size: 15px;
+    font-weight: 600;
+    color: #36404D;
+    font-family: 'Poppins', sans-serif;
+}
+
+.languageitemnative {
+    font-size: 13px;
+    color: #36404D;
+    opacity: 0.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.languagecheckicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

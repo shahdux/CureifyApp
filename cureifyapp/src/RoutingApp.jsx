@@ -35,6 +35,7 @@ import Redeemed from './pages/Redeemed';
 import TestResults from './pages/TestResults';
 import Alternative from './pages/Alternative';
 import ExtractedPrescription from './pages/ExtractedPrescription';
+import Language from './pages/Language';
 
 
 
@@ -94,6 +95,7 @@ const RoutingApp = () => {
 <Route path='/test-results' element={<TestResults />} />
 <Route path='/alternative' element={<Alternative />} />
 <Route path='/extracted-prescription' element={<ExtractedPrescription />} />
+<Route path='/language' element={<Language />} />
 
 
 
