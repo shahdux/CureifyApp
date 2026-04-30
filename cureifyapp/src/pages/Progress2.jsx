@@ -5,10 +5,10 @@ import Navbar from '../components/Navbar';
 import back from '../assets/back.svg';
 import MedicineCard2 from '../components/MedicineCard2';
 import { Link } from 'react-router-dom';
-import pil from '../assets/pillsg.svg';
 import SectionTitle from '../components/SectionTitle';
 import smalll from '../assets/smalllogo.svg';
 import { useLang } from '../context/LanguageContext';
+import { supabase } from './../supabase'; // Import supabase
 
 const fadeUp = { hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0 } };
 const vp = { once: true, amount: 0.2 };
@@ -16,10 +16,21 @@ const vp = { once: true, amount: 0.2 };
 const Progress2 = () => {
     const { isArabic } = useLang();
     const [loading, setLoading] = useState(true);
+    const [meds, setMeds] = useState([]); // State to hold your dynamic meds
 
     useEffect(() => {
-        const timer = setTimeout(() => setLoading(false), 1000);
-        return () => clearTimeout(timer);
+        async function fetchMeds() {
+            const res = await supabase
+                .from('Users')
+                .select('meds')
+                .eq('id', 4); // Match the ID used in MedDetails
+
+            if (res.data?.[0]?.meds) {
+                setMeds(res.data[0].meds);
+            }
+            setLoading(false);
+        }
+        fetchMeds();
     }, []);
 
     if (loading) return (
@@ -43,6 +54,7 @@ const Progress2 = () => {
                     <SectionTitle title={isArabic ? "تقدمك" : "Your Progress"} margin="0 auto" align="center"/>
                 </div>
 
+                {/* Progress Chart Card */}
                 <motion.div className='progresschartcard' variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6 }} viewport={vp}>
                     <div className='donutwrapper'>
                         <svg viewBox="0 0 120 120" className='donutsvg'>
@@ -75,6 +87,7 @@ const Progress2 = () => {
                     </div>
                 </motion.div>
 
+                {/* Tabs */}
                 <motion.div className='progresstabs' variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: 0.1 }} viewport={vp}>
                     <Link to="/progress" style={{ textDecoration: 'none' }}>
                         <button className='progresstab'>{isArabic ? "مكتملة" : "Completed"}</button>
@@ -87,17 +100,25 @@ const Progress2 = () => {
                     </Link>
                 </motion.div>
 
-                {[1, 2, 3].map((_, index) => (
-                    <motion.div key={index} variants={fadeUp} initial="hidden" whileInView="visible" transition={{ duration: 0.6, delay: index * 0.1 }} viewport={vp}>
+                {/* Dynamic Medicine Cards */}
+                {meds.map((med, index) => (
+                    <motion.div 
+                        key={index} 
+                        variants={fadeUp} 
+                        initial="hidden" 
+                        whileInView="visible" 
+                        transition={{ duration: 0.6, delay: index * 0.1 }} 
+                        viewport={vp}
+                    >
                         <MedicineCard2
-                            image={pil}
-                            name="Aspirin 100mg"
-                            tablets={1}
-                            frequency={isArabic ? "مرة يومياً" : "Once daily"}
-                            time="09:00 AM"
-                            remaining={25}
-                            total={30}
-                            duration={isArabic ? "30 يوم" : "30 days"}
+                            image={med.image}
+                            name={med.dosage ? `${med.name} ${med.dosage}` : med.name}
+                            tablets={1} 
+                            frequency={isArabic ? med.freqAr : med.freqEn}
+                            time={med.time}
+                            remaining={med.remaining}
+                            total={med.total}
+                            duration={isArabic ? med.durAr : med.durEn}
                         />
                     </motion.div>
                 ))}

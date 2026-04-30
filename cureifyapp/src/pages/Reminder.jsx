@@ -63,13 +63,11 @@ const Reminder = () => {
                     <div className='forinputswtexts'>
                         <div className='for2inputs'>
                             
-                            {/* Medicine Name */}
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "اسم الدواء" : "Medicine Name"}</p>
                                 <input type="text" className='inputc' placeholder={isArabic ? "بانادول" : "Panadol"} />
                             </div>
 
-                            {/* Total Pills */}
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "إجمالي الحبوب المتاحة" : "Total Pills Available"}</p>
                                 <div className='inputwtext'>
@@ -78,19 +76,16 @@ const Reminder = () => {
                                 </div>
                             </div>
 
-                            {/* Counter */}
                             <div className='titlewinputbutton'>
                                 <p className='inputtile'>{isArabic ? "الحبوب لكل جرعة" : "Pills per intake"}</p>
                                 <Counter />
                             </div>
 
-                            {/* Time */}
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "الوقت" : "Time"}</p>
                                 <input type="time" className='inputc' />
                             </div>
 
-                            {/* Frequency */}
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "التكرار" : "Frequency"}</p>
                                 <select className='inputc martop3 lw'>
@@ -100,7 +95,6 @@ const Reminder = () => {
                                 </select>
                             </div>
 
-                            {/* Duration */}
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "المدة" : "Duration"}</p>
                                 <select className='inputc martop3 lw'>
@@ -109,13 +103,11 @@ const Reminder = () => {
                                 </select>
                             </div>
 
-                            {/* Start Date */}
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "تاريخ البدء" : "Start Date"}</p>
                                 <input type="date" className='inputc' />
                             </div>
 
-                            {/* Pill Color */}
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "لون الحبة (اختياري)" : "Pill Color (Optional)"}</p>
                                 <select className='inputc martop3 lw'>
@@ -125,13 +117,11 @@ const Reminder = () => {
                                 </select>
                             </div>
 
-                            {/* Notes */}
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "ملاحظات (اختياري)" : "Notes (Optional)"}</p>
                                 <textarea className='inputc martop3' placeholder={isArabic ? "تناوله بعد الطعام..." : "Take after food..."}></textarea>
                             </div>
 
-                            {/* Voice Alert Toggle */}
                             <div className='togglecard'>
                                 <div className='titlewtogbutton'>
                                     <p className='toggle-title'>{isArabic ? "تنبيه صوتي" : "Voice Alert"}</p>
@@ -140,7 +130,6 @@ const Reminder = () => {
                                 <p className='toggle-desc'>{isArabic ? "تشغيل تذكير صوتي عند موعد الدواء." : "Play a voice reminder when it's time to take your medication."}</p>
                             </div>
 
-                            {/* Reminder Call Toggle */}
                             <div className='togglecard'>
                                 <div className='titlewtogbutton'>
                                     <p className='toggle-title'>{isArabic ? "مكالمة تذكير" : "Reminder call"}</p>
@@ -184,7 +173,6 @@ const Reminder = () => {
                 )}
             </AnimatePresence>
 
-            {/* Camera Viewfinder Overlay */}
             {cameraMode === 'viewfinder' && (
                 <div className="camera-sim-overlay">
                     <div className="viewfinder">
@@ -205,7 +193,6 @@ const Reminder = () => {
                 </div>
             )}
 
-            {/* Scanning/Processing Overlay */}
             {cameraMode === 'captured' && (
                 <div className="camera-sim-overlay captured-bg">
                     <div className="captured-content">
@@ -223,3 +210,5 @@ const Reminder = () => {
 }
 
 export default Reminder;
+
+

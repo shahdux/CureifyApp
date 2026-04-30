@@ -212,7 +212,7 @@ const Home = () => {
                         <Link to="/profile" style={{ textDecoration: 'none' }}>
                             <img src={profile} alt="profile" />
                         </Link>
-                        <div>
+                        <div className='profilpart'>
                             <p className='name'>{isArabic ? "أهلاً، بدر!" : "Hello, Badr!"}</p>
                             <div className='pointsdiv'>
                                 <p className='points'>{isArabic ? "٢٠٠ نقطة" : "200 points"}</p>

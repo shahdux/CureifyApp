@@ -74,6 +74,7 @@ const Health = () => {
                     </div>
 
                     <div className='forbloodtests'>
+                        {/* CBC CARD */}
                         <motion.div className='testcard' whileHover={{ scale: 1.01 }}>
                             <p className='testcardtitle'>{isArabic ? "صورة دم كاملة (CBC)" : "Complete Blood Count (CBC)"}</p>
                             <div className='testcarddate'>
@@ -91,9 +92,30 @@ const Health = () => {
                                         <p className='testrowunit'>g/dL</p>
                                     </div>
                                 </div>
+                                <div className='testrow normal'>
+                                    <div className='testrowleft'>
+                                        <p className='testrowname'>{isArabic ? "خلايا الدم البيضاء" : "WBC"}</p>
+                                        <p className='testrowstatus'>{isArabic ? "معدل طبيعي" : "Normal range"}</p>
+                                    </div>
+                                    <div className='testrowright'>
+                                        <p className='testrowvalue normal'>7.5</p>
+                                        <p className='testrowunit'>K/uL</p>
+                                    </div>
+                                </div>
+                                <div className='testrow normal'>
+                                    <div className='testrowleft'>
+                                        <p className='testrowname'>{isArabic ? "الصفائح الدموية" : "Platelets"}</p>
+                                        <p className='testrowstatus'>{isArabic ? "معدل طبيعي" : "Normal range"}</p>
+                                    </div>
+                                    <div className='testrowright'>
+                                        <p className='testrowvalue normal'>250</p>
+                                        <p className='testrowunit'>K/uL</p>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
 
+                        {/* LIPID PANEL CARD */}
                         <motion.div className='testcard' whileHover={{ scale: 1.01 }}>
                             <p className='testcardtitle'>{isArabic ? "تحليل الدهون" : "Lipid Panel"}</p>
                             <div className='testcarddate'>
@@ -108,6 +130,36 @@ const Health = () => {
                                     </div>
                                     <div className='testrowright'>
                                         <p className='testrowvalue elevated'>220</p>
+                                        <p className='testrowunit'>mg/dL</p>
+                                    </div>
+                                </div>
+                                <div className='testrow elevated'>
+                                    <div className='testrowleft'>
+                                        <p className='testrowname'>HDL</p>
+                                        <p className='testrowstatus'>{isArabic ? "مرتفع قليلاً" : "Slightly elevated"}</p>
+                                    </div>
+                                    <div className='testrowright'>
+                                        <p className='testrowvalue elevated'>45</p>
+                                        <p className='testrowunit'>mg/dL</p>
+                                    </div>
+                                </div>
+                                <div className='testrow elevated'>
+                                    <div className='testrowleft'>
+                                        <p className='testrowname'>LDL</p>
+                                        <p className='testrowstatus'>{isArabic ? "مرتفع قليلاً" : "Slightly elevated"}</p>
+                                    </div>
+                                    <div className='testrowright'>
+                                        <p className='testrowvalue elevated'>140</p>
+                                        <p className='testrowunit'>mg/dL</p>
+                                    </div>
+                                </div>
+                                <div className='testrow normal'>
+                                    <div className='testrowleft'>
+                                        <p className='testrowname'>{isArabic ? "الدهون الثلاثية" : "Triglycerides"}</p>
+                                        <p className='testrowstatus'>{isArabic ? "معدل طبيعي" : "Normal range"}</p>
+                                    </div>
+                                    <div className='testrowright'>
+                                        <p className='testrowvalue normal'>175</p>
                                         <p className='testrowunit'>mg/dL</p>
                                     </div>
                                 </div>
