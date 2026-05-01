@@ -14,6 +14,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import RoutingApp from './RoutingApp';
 import './index.css';
+import './App.css';
 import { LanguageProvider } from './context/LanguageContext';
 
 const startApp = () => {

@@ -15,6 +15,8 @@
 color: #FFF;
 text-align: center;
 font-family: poppins;
+    font-family: 'Poppins', sans-serif;
+
 font-size: 24px;
 font-style: normal;
 font-weight: 700;
@@ -25,6 +27,8 @@ margin: 0;
     color: #FFF;
 text-align: center;
 font-family: poppins;
+    font-family: 'Poppins', sans-serif;
+
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -70,7 +74,8 @@ box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.21);
 }
 .inputtile{
     color: #36404D;
-font-family: poppins;
+    font-family: 'Poppins', sans-serif;
+
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
@@ -90,6 +95,8 @@ background: #FFF;
   padding-left: 10px;  
     color: #36404D;
 font-family: poppins;
+    font-family: 'Poppins', sans-serif;
+
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -100,6 +107,8 @@ line-height: 20px; /* 125% */
     color: var(--Grey, #6C7278);
 text-align: center;
 font-family: poppins;
+    font-family: 'Poppins', sans-serif;
+
 font-size: 16px;
 font-style: normal;
 font-weight: 500;

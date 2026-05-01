@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.0e7594a7.css",
-    "main.js": "./static/js/main.fb585fb3.js",
+    "main.css": "./static/css/main.e8a13bc7.css",
+    "main.js": "./static/js/main.6651c95f.js",
     "static/media/pp.svg": "./static/media/pp.4e6f7eddcd06821756f98e58d83fe7ae.svg",
     "static/media/profile.svg": "./static/media/profile.d6667fdd0feeb35370c6c7f54cc97de0.svg",
     "static/media/altern.png": "./static/media/altern.d269a403944396be53dd.png",
@@ -13,6 +13,7 @@
     "static/media/img2.png": "./static/media/img2.97b3617da822671ce8d2.png",
     "static/media/logo.svg": "./static/media/logo.ab6dcdb3bc55e606cb9c800d8f36abdc.svg",
     "static/media/google.svg": "./static/media/google.9e9e0fb5078ea289d3ee83e607a5b090.svg",
+    "static/media/language.svg": "./static/media/language.6f4f63deec923b6fc012972638199632.svg",
     "static/media/ar.svg": "./static/media/ar.0336e64e639084278cf02f5e9c55177c.svg",
     "static/media/loginbg.svg": "./static/media/loginbg.91703195b0a08afa195f.svg",
     "static/media/bigstar.svg": "./static/media/bigstar.8d39cfbeaa8bf54f29ecc5c68e047bf2.svg",
@@ -26,17 +27,15 @@
     "static/media/lock.svg": "./static/media/lock.7473a1a33f406c0ca0b02ba4e08f0e23.svg",
     "static/media/notpill.svg": "./static/media/notpill.f07e401af1ab0640ceec1561894417f3.svg",
     "static/media/logoicon.svg": "./static/media/logoicon.efc3ac03f54bcebcc26a7fc41d338fa3.svg",
+    "index.html": "./index.html",
     "static/media/box.svg": "./static/media/box.d32a53bcd11afb73cb5fbc1d8d836ad4.svg",
+    "static/media/smalllogo.svg": "./static/media/smalllogo.4c85d451acc9d87a89615af7f6714446.svg",
     "static/media/prescription.svg": "./static/media/prescription.6db16d50f6ee2dc09f8e251b9ba8dbe5.svg",
     "static/media/search.svg": "./static/media/search.5da0713f834d7df9da884c61c3741e6c.svg",
-    "static/media/bluep.svg": "./static/media/bluep.40b12a83937e7188849c351600dfa3b7.svg",
-    "static/media/greyp.svg": "./static/media/greyp.6c25be79cb848518ff0995cf414dd5ae.svg",
     "static/media/pillsg.svg": "./static/media/pillsg.2dff34e62074c10761b0cbce89dd764e.svg",
     "static/media/warning.svg": "./static/media/warning.24daab424d65177e5b0ff131f19e581e.svg",
     "static/media/bluelock.svg": "./static/media/bluelock.12d4b0918af198f6dc7a60d7bee13730.svg",
-    "static/media/pca.svg": "./static/media/pca.aba9a9b4f128eec9e00e5823c0ec098b.svg",
     "static/media/rewards.svg": "./static/media/rewards.8c4491ca5fec2e008308132bf8b003dd.svg",
-    "index.html": "./index.html",
     "static/media/bell.svg": "./static/media/bell.1fa758f6691abdda8516dba3c2a6bfc8.svg",
     "static/media/noti.svg": "./static/media/noti.c32b9f56256490ad9628be712d4a0a73.svg",
     "static/media/pic.svg": "./static/media/pic.12b682017dbd4766e01035d7a0051bad.svg",
@@ -51,7 +50,6 @@
     "static/media/yay.svg": "./static/media/yay.ac7e61bc5f76df4e1910f44add632afe.svg",
     "static/media/cnf.svg": "./static/media/cnf.a2fcf3e9eadd564eb0f4b64d47a38b96.svg",
     "static/media/f.svg": "./static/media/f.07b267d1d1fa5607cc05bd29725e5d51.svg",
-    "static/media/remai.svg": "./static/media/remai.d7de1c070870b6303a80540bf7323cf1.svg",
     "static/media/home.svg": "./static/media/home.270a52c7a7ff3c866c135b5e4b14bb36.svg",
     "static/media/clock.svg": "./static/media/clock.43a1c57bf7999fb41b57b9db90187bf2.svg",
     "static/media/apple.svg": "./static/media/apple.a164c00252653ee19a22d8b1fb26f02e.svg",
@@ -71,11 +69,11 @@
     "static/media/export.svg": "./static/media/export.dab6e8a70383675bd9e409d205471f78.svg",
     "static/media/Icon.svg": "./static/media/Icon.df6114d3f3453b8d1b1439968611c3a8.svg",
     "static/media/arrow.svg": "./static/media/arrow.f4bdc6fe81d5d5f910bb8ae468fdd3f0.svg",
-    "main.0e7594a7.css.map": "./static/css/main.0e7594a7.css.map",
-    "main.fb585fb3.js.map": "./static/js/main.fb585fb3.js.map"
+    "main.e8a13bc7.css.map": "./static/css/main.e8a13bc7.css.map",
+    "main.6651c95f.js.map": "./static/js/main.6651c95f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e7594a7.css",
-    "static/js/main.fb585fb3.js"
+    "static/css/main.e8a13bc7.css",
+    "static/js/main.6651c95f.js"
   ]
 }
