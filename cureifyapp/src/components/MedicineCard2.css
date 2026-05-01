@@ -167,3 +167,126 @@
 .medicinecard2progressfill {
     background: linear-gradient(90deg, #004a99 0%, #0066cc 100%);
 }
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+
+
+.arpopup-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    z-index: 9998;
+        width: 415px;
+}
+
+.arpopup-sheet {
+    position: fixed;
+    bottom: 0;
+  
+    transform: translateX(-50%);
+    width: 355px;
+    background-color: #fff;
+    border-radius: 24px 24px 0 0;
+    padding: 24px 20px 40px;
+    z-index: 9999;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.15);
+    font-family: 'Poppins', sans-serif;
+}
+
+.arpopup-handle {
+    width: 40px;
+    height: 4px;
+    background-color: #E0E0E0;
+    border-radius: 2px;
+    margin: 0 auto 20px;
+}
+
+.arpopup-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #36404D;
+    margin: 0 0 6px;
+}
+
+.arpopup-subtitle {
+    font-size: 13px;
+    color: #888;
+    margin: 0 0 20px;
+}
+
+.arpopup-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background-color: #F7F7F7;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.arpopup-option:hover {
+    background-color: #EFEFEF;
+}
+
+.arpopup-option:active {
+    background-color: #E8E8E8;
+}
+
+.arpopup-option-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background-color: #EAF4F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.arpopup-option-text {
+    flex: 1;
+}
+
+.arpopup-option-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #36404D;
+    margin: 0 0 2px;
+}
+
+.arpopup-option-desc {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+.arpopup-chevron {
+    flex-shrink: 0;
+}
+
+.arpopup-chevron-rtl {
+    transform: rotate(180deg);
+}
+
+.arpopup-cancel {
+    text-align: center;
+    margin-top: 16px;
+    color: #888;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 0;
+    transition: color 0.15s ease;
+}
+
+.arpopup-cancel:hover {
+    color: #555;
+}
