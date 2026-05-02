@@ -1,14 +1,14 @@
-// import React, { useState } from 'react';
-// import "./MedicineCard.css"
+
+
+// import React from 'react';
+// import "./MedicineCard.css";
 
 // const MedicineCard = (props) => {
-//     const [taken, setTaken] = useState(false);
 
 //     const handleToggle = () => {
-//         if (!taken && props.onTake) {
+//         if (!props.taken && props.onTake) {
 //             props.onTake();
 //         }
-//         setTaken(prev => !prev);
 //     }
 
 //     return (
@@ -26,8 +26,10 @@
 //             </div>
 
 //             <button
-//                 className={`medcardToggle ${taken ? 'medcardToggleTaken' : ''}`}
+                
+//                 className={`medcardToggle ${props.taken ? 'medcardToggleTaken' : ''}`}
 //                 onClick={handleToggle}
+//                 disabled={props.taken} 
 //             />
 //         </div>
 //     );
@@ -35,15 +37,17 @@
 
 // export default MedicineCard;
 
+
 import React from 'react';
 import "./MedicineCard.css";
 
 const MedicineCard = (props) => {
 
     const handleToggle = () => {
-        // Only trigger the take action if it hasn't been taken already
         if (!props.taken && props.onTake) {
-            props.onTake();
+            props.onTake();       // decrease count
+        } else if (props.taken && props.onUntake) {
+            props.onUntake();     // restore count
         }
     }
 
@@ -62,10 +66,9 @@ const MedicineCard = (props) => {
             </div>
 
             <button
-                // Use the prop passed from Home to determine the class
                 className={`medcardToggle ${props.taken ? 'medcardToggleTaken' : ''}`}
                 onClick={handleToggle}
-                disabled={props.taken} // Prevents clicking it again once green
+                // removed disabled so it can be untoggled
             />
         </div>
     );
