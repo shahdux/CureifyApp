@@ -58,3 +58,7 @@ position: relative;
  
 
 }
+.camera-sim-overlay {
+    height: 896px;
+    max-height: 100dvh;
+}
