@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./Cart.css"
+import "./Cart.css";
 import Navbar from '../components/Navbar';
 import back from '../assets/back.svg';
 import smalll from '../assets/smalllogo.svg';
@@ -19,11 +19,36 @@ const Cart = () => {
     useEffect(() => {
         async function fetchOrders() {
             const res = await supabase.from("Orders").select("*").eq("id", 7);
-            setOrders(res.data || []);
+            const initialOrders = (res.data || []).map(item => ({
+                ...item,
+                quantity: 1
+            }));
+            setOrders(initialOrders);
             setLoading(false);
         }
         fetchOrders();
     }, []);
+
+    // Function to handle quantity changes (+ and -)
+    const updateQuantity = (id, delta) => {
+        setOrders(prevOrders =>
+            prevOrders.map(item =>
+                item.id === id 
+                    ? { ...item, quantity: Math.max(1, item.quantity + delta) } 
+                    : item
+            )
+        );
+    };
+
+    // Function to remove an item from the list
+    const deleteItem = (id) => {
+        setOrders(prevOrders => prevOrders.filter(item => item.id !== id));
+    };
+
+    // Dynamic Calculations
+    const subTotal = orders.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    const delivery = orders.length > 0 ? 20 : 0;
+    const total = subTotal + delivery;
 
     if (loading) return (
         <div className="loader-container">
@@ -46,13 +71,17 @@ const Cart = () => {
                     <SectionTitle title={isArabic ? "السلة" : "Cart"} />
                 </div>
 
-                {orders.map((order, idx) => (
-                    <motion.div key={idx} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.1 }}>
+                {orders.map((order) => (
+                    <motion.div key={order.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
                         <CartCard
                             image={order.image}
                             name={order.items}
                             pharmacy={order.pharmacy}
                             price={order.price}
+                            quantity={order.quantity}
+                            onIncrease={() => updateQuantity(order.id, 1)}
+                            onDecrease={() => updateQuantity(order.id, -1)}
+                            onDelete={() => deleteItem(order.id)}
                         />
                     </motion.div>
                 ))}
@@ -65,17 +94,17 @@ const Cart = () => {
                 <div className='summarybox'>
                     <div className='summaryrow'>
                         <p className='summarylabel'>{isArabic ? "المجموع الفرعي" : "Sub Total"}</p>
-                        <p className='summaryvalue'>720 EGP</p>
+                        <p className='summaryvalue'>{subTotal} EGP</p>
                     </div>
                     <div className='divider'/>
                     <div className='summaryrow'>
                         <p className='summarylabel'>{isArabic ? "التوصيل" : "Delivery"}</p>
-                        <p className='summaryvalue'>20 EGP</p>
+                        <p className='summaryvalue'>{delivery} EGP</p>
                     </div>
                     <div className='divider'/>
                     <div className='summaryrow'>
                         <p className='summarylabelbold'>{isArabic ? "الإجمالي" : "Total"}</p>
-                        <p className='summaryvaluebold'>745 EGP</p>
+                        <p className='summaryvaluebold'>{total} EGP</p>
                     </div>
                 </div>
 
@@ -88,4 +117,3 @@ const Cart = () => {
 }
 
 export default Cart;
-
