@@ -289,13 +289,13 @@ const Search = () => {
                 transition={{ duration: 0.5 }}
             >
                 <div className='titlewsub'>
-                    <p className='sectiontitle margin0 mar12'>
-                        {isArabic ? "ابحث عن الأدوية القريبة" : "Find Medicines Nearby"}
-                    </p>
-                    <p className='subtitles'>
-                        {isArabic ? "تحقق من الصيدليات التي لديها دوائك في المخزون." : "Check which pharmacies have your medication in stock."}
-                    </p>
-                </div>
+    <p className='sectiontitle margin0 mar12'>
+        {isArabic ? "ابحث عن دوائك" : "Search for Your Medicine"}
+    </p>
+    <p className='subtitles'>
+        {isArabic ? "أدخل اسم الدواء لعرض الصيدليات القريبة التي تتوفر لديها." : "Enter a medicine name to see nearby pharmacies that have it in stock."}
+    </p>
+</div>
 
                 <input type="text" className='searchinput' placeholder={isArabic ? "بحث" : "Search"} />
 
