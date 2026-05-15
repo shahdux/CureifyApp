@@ -104,3 +104,53 @@ margin: 0;
     background: #00A4AA;
     box-shadow: 0 0 0 3px #ffffff inset;
 }
+
+.medcardToggle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.medcardToggleTaken {
+    background-color: #e6f9ee;
+}
+
+.medcardToggleInner {
+   width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2.5px solid #e0e0e0;
+    /* background-color: #f0f0f0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.medcardToggleTaken .medcardToggleInner {
+    border-color: #1a9e3f;
+    background-color: transparent;
+}
+
+.medcardToggleInner svg {
+    width: 12px;
+    height: 10px;
+}
+
+.medcardToggleInner svg path {
+    stroke: transparent;
+    transition: stroke 0.2s ease;
+}
+
+.medcardToggleTaken .medcardToggleInner svg path {
+    stroke: #1a9e3f;
+}

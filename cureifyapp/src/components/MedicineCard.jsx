@@ -1,5 +1,6 @@
 
 
+
 // import React from 'react';
 // import "./MedicineCard.css";
 
@@ -7,7 +8,9 @@
 
 //     const handleToggle = () => {
 //         if (!props.taken && props.onTake) {
-//             props.onTake();
+//             props.onTake();       // decrease count
+//         } else if (props.taken && props.onUntake) {
+//             props.onUntake();     // restore count
 //         }
 //     }
 
@@ -26,10 +29,9 @@
 //             </div>
 
 //             <button
-                
 //                 className={`medcardToggle ${props.taken ? 'medcardToggleTaken' : ''}`}
 //                 onClick={handleToggle}
-//                 disabled={props.taken} 
+//                 // removed disabled so it can be untoggled
 //             />
 //         </div>
 //     );
@@ -45,9 +47,9 @@ const MedicineCard = (props) => {
 
     const handleToggle = () => {
         if (!props.taken && props.onTake) {
-            props.onTake();       // decrease count
+            props.onTake();
         } else if (props.taken && props.onUntake) {
-            props.onUntake();     // restore count
+            props.onUntake();
         }
     }
 
@@ -68,8 +70,13 @@ const MedicineCard = (props) => {
             <button
                 className={`medcardToggle ${props.taken ? 'medcardToggleTaken' : ''}`}
                 onClick={handleToggle}
-                // removed disabled so it can be untoggled
-            />
+            >
+                <div className='medcardToggleInner'>
+                    <svg viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 5L4.5 8.5L11 1.5" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </div>
+            </button>
         </div>
     );
 }

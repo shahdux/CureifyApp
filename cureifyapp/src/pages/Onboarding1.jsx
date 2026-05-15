@@ -6,7 +6,6 @@ import Button from '../components/Button';
 import TextButton from '../components/TextButton';
 import { Link } from 'react-router-dom';
 import smalll from '../assets/smalllogo.svg';
-import { motion } from 'framer-motion'; 
 import { useLang } from '../context/LanguageContext'; 
 
 const Onboarding1 = () => {
@@ -35,22 +34,14 @@ const Onboarding1 = () => {
     );
 
     return (
-        <motion.div 
-            className='onboarddiv'
-            initial={{ opacity: 0, x: isArabic ? 100 : -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: isArabic ? -100 : 100 }}
-            transition={{ duration: 0.5 }}
-        >
+        <div className='onboarddiv'>
             <div className='buttonholder'>
                 <Link to="/onboarding-6" style={{ textDecoration: 'none' }}>
                     <TextButton text={isArabic ? data.button1_ar : data.button1} /> 
                 </Link>
             </div>
 
-            <motion.img 
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
+            <img 
                 src={data.image} 
                 alt="onboarding" 
             />
@@ -69,7 +60,7 @@ const Onboarding1 = () => {
             <Link to="/onboarding-2" style={{ textDecoration: 'none' }}>
                 <Button text={isArabic ? data.button2_ar : data.button2} />
             </Link>
-        </motion.div>
+        </div>
     );
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 import "./Navbar.css";
 import home from '../assets/home.svg';
 import search from '../assets/search.svg';
-import add from '../assets/Icon.svg';
+import add from '../assets/logoreminder.svg';
 import bag from '../assets/cart.svg';
 import health from '../assets/health.svg';
 import { Link, useLocation } from 'react-router-dom';
@@ -25,7 +25,7 @@ const Navbar = () => {
 
         <div className='circle'>
           <Link to="/add-reminder">
-            <img src={add} alt="add icon"/>
+            <img src={add} alt="add icon" className='remicon'/>
           </Link>
         </div>
 

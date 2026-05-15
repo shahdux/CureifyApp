@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 const Onboarding6 = () => {
     const [data, setData] = useState("");
     const [loading, setLoading] = useState(true);
+    const [imgLoaded, setImgLoaded] = useState(false);
 
     useEffect(() => {
         async function getOnboarding() {
@@ -19,10 +20,21 @@ const Onboarding6 = () => {
         getOnboarding();
     }, []);
 
-    if (loading) return (
-        <div className="loader-container">
-            <img src={smalll} alt="loading" className="loader-logo" />
-        </div>
+    if (loading || !imgLoaded) return (
+        <>
+            <div className="loader-container">
+                <img src={smalll} alt="loading" className="loader-logo" />
+            </div>
+            {!loading && data.image && (
+                <img
+                    src={data.image}
+                    alt=""
+                    style={{ display: 'none' }}
+                    onLoad={() => setImgLoaded(true)}
+                    onError={() => setImgLoaded(true)}
+                />
+            )}
+        </>
     );
 
     return (

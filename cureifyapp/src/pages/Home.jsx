@@ -153,7 +153,7 @@ const Home = () => {
 
                 <div className='medicationsection'>
                     <div className='titlewbutton'>
-                        <p className='sectiontitle'>{isArabic ? "أدوية قاربت على الانتهاء" : "Medicines Running Low"}</p>
+                        <p className='sectiontitle'>{isArabic ? "أدوية قاربت على الانتهاء" : "Running Low"}</p>
                     </div>
                     <motion.div className='medcard' whileHover={{ x: 5 }}>
                         <div className='forfirst2'>
