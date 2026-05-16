@@ -11,7 +11,8 @@
       height: 856px;
     padding-bottom: 70px;
     position: relative;
-
+padding-bottom: 110px;
+    padding-top: 30px;
 
 }
 .profilewnot{
@@ -161,4 +162,18 @@ font-size: 12px;
 font-style: normal;
 font-weight: 700;
 line-height: 27px; /* 270% */
+}
+.progressbar-track {
+    width: 327px;
+    height: 8px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.20);
+    overflow: hidden;
+}
+
+.progressbar-fill {
+    height: 100%;
+    border-radius: 100px;
+    background: #DBEAFE;
+    transition: width 0.4s ease;
 }

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import "./Home.css";
 import Navbar from '../components/Navbar';
 import export1 from '../assets/export.svg';
-import progress from '../assets/progress.svg';
 import profile from '../assets/profile.svg';
 import smalll from '../assets/smalllogo.svg';
 import notofications from '../assets/noti.svg';
@@ -32,49 +31,60 @@ const Home = () => {
         fetchMeds();
     }, []);
 
-    const handleTakeMed = async (medName) => {
-        const updatedMeds = meds.map(med => {
-            if (med.name === medName && !med.taken) {
-                return { 
-                    ...med, 
-                    remaining: med.remaining > 0 ? med.remaining - 1 : 0,
-                    taken: true 
-                };
-            }
-            return med;
+    const handleTakeMed = async (medIndex) => {
+        setMeds(prevMeds => {
+            const updatedMeds = prevMeds.map((med, i) => {
+                if (i === medIndex && !med.taken) {
+                    return { 
+                        ...med, 
+                        remaining: med.remaining > 0 ? med.remaining - 1 : 0,
+                        taken: true 
+                    };
+                }
+                return med;
+            });
+
+            supabase
+                .from('Users')
+                .update({ meds: updatedMeds })
+                .eq('id', 4)
+                .then(({ error }) => {
+                    if (error) console.error("Error updating medication:", error);
+                });
+
+            return updatedMeds;
         });
-
-        setMeds(updatedMeds);
-
-        const { error } = await supabase
-            .from('Users')
-            .update({ meds: updatedMeds })
-            .eq('id', 4);
-
-        if (error) console.error("Error updating medication:", error);
     };
 
-    const handleUntakeMed = async (medName) => {
-        const updatedMeds = meds.map(med => {
-            if (med.name === medName && med.taken) {
-                return { 
-                    ...med, 
-                    remaining: med.remaining + 1,
-                    taken: false 
-                };
-            }
-            return med;
+    const handleUntakeMed = async (medIndex) => {
+        setMeds(prevMeds => {
+            const updatedMeds = prevMeds.map((med, i) => {
+                if (i === medIndex && med.taken) {
+                    return { 
+                        ...med, 
+                        remaining: med.remaining + 1,
+                        taken: false 
+                    };
+                }
+                return med;
+            });
+
+            supabase
+                .from('Users')
+                .update({ meds: updatedMeds })
+                .eq('id', 4)
+                .then(({ error }) => {
+                    if (error) console.error("Error updating medication:", error);
+                });
+
+            return updatedMeds;
         });
-
-        setMeds(updatedMeds);
-
-        const { error } = await supabase
-            .from('Users')
-            .update({ meds: updatedMeds })
-            .eq('id', 4);
-
-        if (error) console.error("Error updating medication:", error);
     };
+
+    const takenCount = meds.filter(med => med.taken).length;
+    const totalCount = meds.length;
+    const percentage = totalCount > 0 ? Math.round((takenCount / totalCount) * 100) : 0;
+    const nextMed = meds.find(med => !med.taken);
 
     if (pageLoading) return (
         <div className="loader-container">
@@ -112,17 +122,27 @@ const Home = () => {
                     <motion.div className='bluecard' whileTap={{ scale: 0.98 }}>
                         <div className='amountwicon'>
                             <p className='amount'>
-                                {isArabic ? "لقد تناولت ١ من ٤ جرعات اليوم." : "You've taken 1 of 4 doses today."}
+                                {isArabic 
+                                    ? `لقد تناولت ${takenCount} من ${totalCount} جرعات اليوم.` 
+                                    : `You've taken ${takenCount} of ${totalCount} doses today.`}
                             </p>
                             <div className='exporticon'>
                                 <img src={export1} alt="export" />
                             </div>
                         </div>
-                        <img src={progress} alt="progress" className='progress-img' />
+
+                        <div className='progressbar-track'>
+                            <div className='progressbar-fill' style={{ width: `${percentage}%` }} />
+                        </div>
+
                         <div className='amountwicon'>
-                            <p className='amount'>{isArabic ? "تم إنجاز ٣٣٪" : "33% Completed"}</p>
+                            <p className='amount'>{isArabic ? `تم إنجاز ${percentage}٪` : `${percentage}% Completed`}</p>
                             <p className='amount'>
-                                {isArabic ? "التالي: فيبراميسين (٩:٠٠ ص)" : "Next: Vibramycin (9:00 AM)"}
+                                {nextMed 
+                                    ? (isArabic 
+                                        ? `التالي: ${nextMed.name} (${nextMed.time})` 
+                                        : `Next: ${nextMed.name} (${nextMed.time})`)
+                                    : (isArabic ? "تم تناول جميع الأدوية!" : "All doses taken!")}
                             </p>
                         </div>
                     </motion.div>
@@ -144,8 +164,8 @@ const Home = () => {
                                 instruction={med.note}
                                 image={med.image} 
                                 taken={med.taken}
-                                onTake={() => handleTakeMed(med.name)}
-                                onUntake={() => handleUntakeMed(med.name)}
+                                onTake={() => handleTakeMed(index)}
+                                onUntake={() => handleUntakeMed(index)}
                             />
                         ))}
                     </div>
