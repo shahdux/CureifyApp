@@ -96,7 +96,7 @@ const Home = () => {
         <>
             <Navbar />
             <motion.div 
-                className='maindiv'
+                className='maindiv gap8'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}

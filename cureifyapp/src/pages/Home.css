@@ -177,3 +177,6 @@ line-height: 27px; /* 270% */
     background: #DBEAFE;
     transition: width 0.4s ease;
 }
+.gap8{
+    gap: 8px;
+}
