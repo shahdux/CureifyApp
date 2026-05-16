@@ -58,7 +58,7 @@ const Alternative = () => {
                     </div>
                     <div className='pharmacyarrival'>
                         <img src={clock} alt="clock" className='clockicon'/>
-                        <p className='pharmacyarrivaltext'>{isArabic ? "يصل خلال ساعتين" : "Arrives in 2 hours"}</p>
+                        <p className='pharmacyarrivaltext'>{isArabic ? "يصل خلال ساعتين" : "Arrives in 2 days"}</p>
                     </div>
                     <Link to="/bag" style={{ textDecoration: 'none', width: '100%' }}>
                         <Button text={isArabic ? "إضافة للسلة" : "Add to cart"} width="340px"/>

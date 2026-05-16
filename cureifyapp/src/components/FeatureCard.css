@@ -32,6 +32,21 @@ line-height: 20px; /* 142.857% */
 margin: 0;
 width: 270px;
 }
+.featuredescta{
+      color: #ffffff;
+        width: 187px;
+font-family: Arial;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 4px;
+    margin: 0;
+    margin-top: 10px;
+
+}
 .forfirst22{
     display: flex;
    width: 260px;
