@@ -123,7 +123,17 @@ const Reminder = () => {
                                     <option>{isArabic ? "أزرق" : "Blue"}</option>
                                 </select>
                             </div>
+<div className='titlewinput'>
+    <p className='inputtile'>
+        {isArabic ? "صورة الدواء (اختياري)" : "Medicine Image (Optional)"}
+    </p>
 
+    <input
+        type="file"
+        accept="image/*"
+        className='inputc martop3 lw'
+    />
+</div>
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "ملاحظات (اختياري)" : "Notes (Optional)"}</p>
                                 <textarea className='inputc martop3' placeholder={isArabic ? "تناوله بعد الطعام..." : "Take after food..."}></textarea>
