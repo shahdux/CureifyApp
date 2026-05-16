@@ -38,21 +38,21 @@ const Extracted = () => {
                 <div className='forbloodtests'>
                     <ExtractedCard 
                         medName="Vibramycin 500mg"
-                        dosage={isArabic ? "١ كبسولة • ٣ مرات يومياً" : "1 capsule • 3 times daily"}
+                        dosage={isArabic ? "١ كبسولة • ٣ مرات يومياً" : "1 capsule • 2 times daily"}
                         duration={isArabic ? "شهران" : "2 months"}
                         instructions={isArabic ? "تناول مع الطعام" : "Take with food"}
                         startDate="3/13/2026"
                     />
                     <ExtractedCard 
                         medName="Sebionex Trio"
-                        dosage={isArabic ? "١ كبسولة • ٣ مرات يومياً" : "1 capsule • 3 times daily"}
+                        dosage={isArabic ? "١ كبسولة • ٣ مرات يومياً" : "1 capsule daily"}
                         duration={isArabic ? "شهران" : "2 months"}
                         instructions={isArabic ? "تناول مع الطعام" : "Take with food"}
                         startDate="3/13/2026"
                     />
                     <ExtractedCard 
-                        medName="Adaplene Gel"
-                        dosage={isArabic ? "١ كبسولة • ٣ مرات يومياً" : "1 capsule • 3 times daily"}
+                        medName="Omega-3"
+                        dosage={isArabic ? "١ كبسولة • ٣ مرات يومياً" : "2 capsules daily"}
                         duration={isArabic ? "شهران" : "2 months"}
                         instructions={isArabic ? "تناول مع الطعام" : "Take with food"}
                         startDate="3/13/2026"

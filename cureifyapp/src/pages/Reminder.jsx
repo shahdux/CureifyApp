@@ -89,6 +89,13 @@ const Reminder = () => {
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "التكرار" : "Frequency"}</p>
                                 <select className='inputc martop3 lw'>
+ <option value="8">
+        {isArabic ? "كل ٨ ساعات" : "Every 8 hours"}
+    </option>
+
+    <option value="12">
+        {isArabic ? "كل ١٢ ساعة" : "Every 12 hours"}
+    </option>
                                     <option value="1">{isArabic ? "كل يوم" : "Every day"}</option>
                                     <option value="2">{isArabic ? "كل يومين" : "Every 2 days"}</option>
                                     <option value="7">{isArabic ? "كل أسبوع" : "Every week"}</option>
