@@ -594,5 +594,3 @@ If you cannot read the prescription clearly, return an empty array: []`,
 }
 
 export default Reminder;
-
-
