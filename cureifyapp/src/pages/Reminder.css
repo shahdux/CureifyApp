@@ -352,3 +352,14 @@ width: 290px;
 .width293i {
     width: 282px;
 }
+.dual-inputs-container {
+    display: flex;
+    gap: 12px; /* Adjust spacing between the two inputs */
+    width: 100%;
+    max-width: 335px; /* Matches your button width layout */
+}
+
+.flex-1 {
+    flex: 1;
+}
+

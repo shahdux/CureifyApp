@@ -202,14 +202,40 @@ If you cannot read the prescription clearly, return an empty array: []`,
                                 <input type="text" className='inputc' placeholder={isArabic ? "بانادول" : "Panadol"} />
                             </div>
 
-                            <div className='titlewinput'>
+                            {/* <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "إجمالي الحبوب المتاحة" : "Total Pills Available"}</p>
                                 <div className='inputwtext'>
                                     <input type="number" className='inputsmallerwidth' />
                                     <p className='pills'>{isArabic ? "حبة" : "Pills"}</p>
                                 </div>
-                            </div>
+                            </div> */}
+{/* Total Pills & Boxes Row */}
+<div className='titlewinput'>
+    <p className='inputtile'>
+        {isArabic ? "الكمية المتوفرة" : "Available Stock"}
+    </p>
+    <div className='dual-inputs-container'>
+        {/* Total Pills Input */}
+        <div className='inputwtext flex-1'>
+            <input 
+                type="number" 
+                className='inputsmallerwidth' 
+                placeholder="0"
+            />
+            <p className='pills'>{isArabic ? "حبة" : "Pills"}</p>
+        </div>
 
+        {/* Number of Boxes Input */}
+        <div className='inputwtext flex-1'>
+            <input 
+                type="number" 
+                className='inputsmallerwidth' 
+                placeholder="1"
+            />
+            <p className='pills'>{isArabic ? "علبة" : "Boxes"}</p>
+        </div>
+    </div>
+</div>
                             <div className='titlewinputbutton'>
                                 <p className='inputtile'>{isArabic ? "الحبوب لكل جرعة" : "Pills per intake"}</p>
                                 <Counter />
