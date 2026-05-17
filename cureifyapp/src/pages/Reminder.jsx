@@ -286,6 +286,75 @@ If you cannot read the prescription clearly, return an empty array: []`,
                                     </select>
                                 </div>
                             </div>
+                            <div className='togglecard'>
+    <div className='titlewtogbutton'>
+        <p className='toggle-title'>
+            {isArabic ? "تنبيه مقدم الرعاية" : "Caregiver Reminder"}
+        </p>
+
+        <Toggle />
+    </div>
+
+    <p className='toggle-desc'>
+        {isArabic
+            ? "إرسال إشعار أو رسالة لمقدم الرعاية إذا فاتك موعد الدواء."
+            : "Send a notification or message to a caregiver if you miss your medication reminder."}
+    </p>
+
+    <div className='titlewinput margintop12'>
+        <p className='inputtile f14'>
+            {isArabic ? "اسم مقدم الرعاية" : "Caregiver Name"}
+        </p>
+
+        <input
+            type="text"
+            className='inputc width293i'
+            placeholder={
+                isArabic
+                    ? "أدخل الاسم"
+                    : "Enter caregiver name"
+            }
+        />
+    </div>
+
+    <div className='titlewinput margintop12'>
+        <p className='inputtile f14'>
+            {isArabic ? "رقم الهاتف" : "Phone Number"}
+        </p>
+
+        <input
+            type="tel"
+            className='inputc width293i'
+            placeholder={
+                isArabic
+                    ? "01XXXXXXXXX"
+                    : "+20 1XXXXXXXXX"
+            }
+        />
+    </div>
+
+    <div className='titlewinput margintop12'>
+        <p className='inputtile f14'>
+            {isArabic ? "طريقة التنبيه" : "Alert Method"}
+        </p>
+
+        <select className='inputc martop3 w295'>
+            <option>
+                {isArabic ? "رسالة نصية" : "SMS"}
+            </option>
+
+            <option>
+                {isArabic ? "إشعار داخل التطبيق" : "In-App Notification"}
+            </option>
+
+            <option>
+                {isArabic ? "مكالمة هاتفية" : "Phone Call"}
+            </option>
+        </select>
+    </div>
+
+   
+</div>
 
                             <Link to="/home" style={{ textDecoration: 'none' }}>
                                 <Button text={isArabic ? "إضافة التذكير" : "Add Reminder"} width="335px" />
