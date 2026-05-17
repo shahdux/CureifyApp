@@ -279,7 +279,6 @@ width: 290px;
 .captured-bg {
     background: #111;
      background-image: url('../assets/pres.png');
-     /* filter: brightness(50%); */
      background-size: cover;
 
 }
