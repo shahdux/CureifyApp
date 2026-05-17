@@ -33,12 +33,18 @@ const Home = () => {
 
     const handleTakeMed = async (medIndex) => {
         setMeds(prevMeds => {
+            const targetMed = prevMeds[medIndex];
+            if (targetMed.taken) return prevMeds;
+
+            // Decrement from shared pool — sync remaining across all same-named meds
+            const newRemaining = Math.max(0, targetMed.remaining - 1);
+
             const updatedMeds = prevMeds.map((med, i) => {
-                if (i === medIndex && !med.taken) {
-                    return { 
-                        ...med, 
-                        remaining: med.remaining > 0 ? med.remaining - 1 : 0,
-                        taken: true 
+                if (med.name === targetMed.name) {
+                    return {
+                        ...med,
+                        remaining: newRemaining,
+                        taken: i === medIndex ? true : med.taken,
                     };
                 }
                 return med;
@@ -58,12 +64,18 @@ const Home = () => {
 
     const handleUntakeMed = async (medIndex) => {
         setMeds(prevMeds => {
+            const targetMed = prevMeds[medIndex];
+            if (!targetMed.taken) return prevMeds;
+
+            // Restore to shared pool — sync remaining across all same-named meds
+            const newRemaining = targetMed.remaining + 1;
+
             const updatedMeds = prevMeds.map((med, i) => {
-                if (i === medIndex && med.taken) {
-                    return { 
-                        ...med, 
-                        remaining: med.remaining + 1,
-                        taken: false 
+                if (med.name === targetMed.name) {
+                    return {
+                        ...med,
+                        remaining: newRemaining,
+                        taken: i === medIndex ? false : med.taken,
                     };
                 }
                 return med;
