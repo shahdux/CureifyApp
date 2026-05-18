@@ -363,3 +363,24 @@ width: 290px;
     flex: 1;
 }
 
+
+
+
+
+
+.dynamic-captured-bg {
+    width: 100%;
+    max-width: 415px; /* Matches your device mockup width */
+    height: 100%;
+    max-height: 896px; /* Matches your device mockup height */
+    
+    /* This is the magic combo */
+    background-size: contain;      /* Fits the entire image without cropping it */
+    background-position: center;   /* Centers it perfectly in the viewport */
+    background-repeat: no-repeat;  /* Prevents it from tiling if it's too small */
+    background-color: #000000;     /* Fills any extra space with black like a real camera */
+}
+
+
+
+

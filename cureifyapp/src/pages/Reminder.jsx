@@ -12,9 +12,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useLang } from '../context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
-
 const GROQ_API_KEY = process.env.REACT_APP_GROQ_API_KEY;
-
 
 const Reminder = () => {
     const { isArabic } = useLang();
@@ -22,11 +20,11 @@ const Reminder = () => {
     const [showSheet, setShowSheet] = useState(false);
     const [cameraMode, setCameraMode] = useState('closed');
     const [analyzing, setAnalyzing] = useState(false);
+    const [capturedImageUri, setCapturedImageUri] = useState(''); // Holds the actual snapshot string
     const videoRef = useRef(null);
     const streamRef = useRef(null);
     const galleryInputRef = useRef(null);
     const navigate = useNavigate();
-
 
     useEffect(() => {
         const timer = setTimeout(() => setPageLoading(false), 800);
@@ -111,7 +109,14 @@ If you cannot read the prescription clearly, return an empty array: []`,
     const handleCameraClick = async () => {
         setShowSheet(false);
         try {
-            const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+            // Using 'environment' requests the back/rear camera layout rather than user/selfie camera
+            const stream = await navigator.mediaDevices.getUserMedia({ 
+                video: { facingMode: { exact: 'environment' } } 
+            }).catch(() => {
+                // Fallback option if exact environment constraint drops error on certain desktop setups
+                return navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+            });
+
             streamRef.current = stream;
             setCameraMode('viewfinder');
             setTimeout(() => {
@@ -135,6 +140,10 @@ If you cannot read the prescription clearly, return an empty array: []`,
         canvas.height = video.videoHeight;
         canvas.getContext('2d').drawImage(video, 0, 0);
 
+        // Turn frame into a local object URL to display instantly as preview frame
+        const dataUrl = canvas.toDataURL('image/jpeg');
+        setCapturedImageUri(dataUrl);
+
         streamRef.current?.getTracks().forEach(t => t.stop());
         setCameraMode('captured');
 
@@ -147,6 +156,7 @@ If you cannot read the prescription clearly, return an empty array: []`,
     const closeCamera = () => {
         streamRef.current?.getTracks().forEach(t => t.stop());
         setCameraMode('closed');
+        setCapturedImageUri('');
     };
 
     // --- Gallery flow ---
@@ -158,6 +168,15 @@ If you cannot read the prescription clearly, return an empty array: []`,
     const handleGalleryChange = async (e) => {
         const file = e.target.files?.[0];
         if (!file) return;
+        
+        // Show scanning preview for custom uploads too
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            setCapturedImageUri(event.target.result);
+            setCameraMode('captured');
+        };
+        reader.readAsDataURL(file);
+
         const base64 = await toBase64(file);
         await analyzeWithGroq(base64, file.type);
     };
@@ -188,6 +207,7 @@ If you cannot read the prescription clearly, return an empty array: []`,
                 <SectionTitle title={isArabic ? "إضافة تذكير" : "Add Reminder"} />
                 <FeatureCard
                     image={f1}
+                    cta={isArabic ? "ابدأ المسح →" : "Start Scanning →"}
                     name={isArabic ? "مسح الوصفة الطبية" : "Scan Prescription"}
                     des={isArabic ? "تعبئة تلقائية باستخدام الذكاء الاصطناعي" : "Auto-fill form using AI scanner"}
                     onClick={() => setShowSheet(true)}
@@ -196,46 +216,36 @@ If you cannot read the prescription clearly, return an empty array: []`,
                 <div className='logincont hauto'>
                     <div className='forinputswtexts'>
                         <div className='for2inputs'>
-
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "اسم الدواء" : "Medicine Name"}</p>
                                 <input type="text" className='inputc' placeholder={isArabic ? "بانادول" : "Panadol"} />
                             </div>
 
-                            {/* <div className='titlewinput'>
-                                <p className='inputtile'>{isArabic ? "إجمالي الحبوب المتاحة" : "Total Pills Available"}</p>
-                                <div className='inputwtext'>
-                                    <input type="number" className='inputsmallerwidth' />
-                                    <p className='pills'>{isArabic ? "حبة" : "Pills"}</p>
-                                </div>
-                            </div> */}
-{/* Total Pills & Boxes Row */}
-<div className='titlewinput'>
-    <p className='inputtile'>
-        {isArabic ? "الكمية المتوفرة" : "Available Stock"}
-    </p>
-    <div className='dual-inputs-container'>
-        {/* Total Pills Input */}
-        <div className='inputwtext flex-1'>
-            <input 
-                type="number" 
-                className='inputsmallerwidth' 
-                placeholder="0"
-            />
-            <p className='pills'>{isArabic ? "حبة" : "Pills"}</p>
-        </div>
+                            <div className='titlewinput'>
+                                <p className='inputtile'>
+                                    {isArabic ? "الكمية المتوفرة" : "Available Stock"}
+                                </p>
+                                <div className='dual-inputs-container'>
+                                    <div className='inputwtext flex-1'>
+                                        <input 
+                                            type="number" 
+                                            className='inputsmallerwidth' 
+                                            placeholder="0"
+                                        />
+                                        <p className='pills'>{isArabic ? "حبة" : "Pills"}</p>
+                                    </div>
 
-        {/* Number of Boxes Input */}
-        <div className='inputwtext flex-1'>
-            <input 
-                type="number" 
-                className='inputsmallerwidth' 
-                placeholder="1"
-            />
-            <p className='pills'>{isArabic ? "علبة" : "Boxes"}</p>
-        </div>
-    </div>
-</div>
+                                    <div className='inputwtext flex-1'>
+                                        <input 
+                                            type="number" 
+                                            className='inputsmallerwidth' 
+                                            placeholder="1"
+                                        />
+                                        <p className='pills'>{isArabic ? "علبة" : "Boxes"}</p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div className='titlewinputbutton'>
                                 <p className='inputtile'>{isArabic ? "الحبوب لكل جرعة" : "Pills per intake"}</p>
                                 <Counter />
@@ -248,13 +258,13 @@ If you cannot read the prescription clearly, return an empty array: []`,
 
                             <div className='titlewinput'>
                                 <p className='inputtile'>{isArabic ? "التكرار" : "Frequency"}</p>
-                                <select className='inputc martop3 lw'>
+                                <motion.select className='inputc martop3 lw'>
                                     <option value="8">{isArabic ? "كل ٨ ساعات" : "Every 8 hours"}</option>
                                     <option value="12">{isArabic ? "كل ١٢ ساعة" : "Every 12 hours"}</option>
                                     <option value="1">{isArabic ? "كل يوم" : "Every day"}</option>
                                     <option value="2">{isArabic ? "كل يومين" : "Every 2 days"}</option>
                                     <option value="7">{isArabic ? "كل أسبوع" : "Every week"}</option>
-                                </select>
+                                </motion.select>
                             </div>
 
                             <div className='titlewinput'>
@@ -312,75 +322,54 @@ If you cannot read the prescription clearly, return an empty array: []`,
                                     </select>
                                 </div>
                             </div>
+                            
                             <div className='togglecard'>
-    <div className='titlewtogbutton'>
-        <p className='toggle-title'>
-            {isArabic ? "تنبيه مقدم الرعاية" : "Caregiver Reminder"}
-        </p>
+                                <div className='titlewtogbutton'>
+                                    <p className='toggle-title'>
+                                        {isArabic ? "تنبيه مقدم الرعاية" : "Caregiver Reminder"}
+                                    </p>
+                                    <Toggle />
+                                </div>
 
-        <Toggle />
-    </div>
+                                <p className='toggle-desc'>
+                                    {isArabic
+                                        ? "إرسال إشعار أو رسالة لمقدم الرعاية إذا فاتك موعد الدواء."
+                                        : "Send a notification or message to a caregiver if you miss your medication reminder."}
+                                </p>
 
-    <p className='toggle-desc'>
-        {isArabic
-            ? "إرسال إشعار أو رسالة لمقدم الرعاية إذا فاتك موعد الدواء."
-            : "Send a notification or message to a caregiver if you miss your medication reminder."}
-    </p>
+                                <div className='titlewinput margintop12'>
+                                    <p className='inputtile f14'>
+                                        {isArabic ? "اسم مقدم الرعاية" : "Caregiver Name"}
+                                    </p>
+                                    <input
+                                        type="text"
+                                        className='inputc width293i'
+                                        placeholder={isArabic ? "أدخل الاسم" : "Enter caregiver name"}
+                                    />
+                                </div>
 
-    <div className='titlewinput margintop12'>
-        <p className='inputtile f14'>
-            {isArabic ? "اسم مقدم الرعاية" : "Caregiver Name"}
-        </p>
+                                <div className='titlewinput margintop12'>
+                                    <p className='inputtile f14'>
+                                        {isArabic ? "رقم الهاتف" : "Phone Number"}
+                                    </p>
+                                    <input
+                                        type="tel"
+                                        className='inputc width293i'
+                                        placeholder={isArabic ? "01XXXXXXXXX" : "+20 1XXXXXXXXX"}
+                                    />
+                                </div>
 
-        <input
-            type="text"
-            className='inputc width293i'
-            placeholder={
-                isArabic
-                    ? "أدخل الاسم"
-                    : "Enter caregiver name"
-            }
-        />
-    </div>
-
-    <div className='titlewinput margintop12'>
-        <p className='inputtile f14'>
-            {isArabic ? "رقم الهاتف" : "Phone Number"}
-        </p>
-
-        <input
-            type="tel"
-            className='inputc width293i'
-            placeholder={
-                isArabic
-                    ? "01XXXXXXXXX"
-                    : "+20 1XXXXXXXXX"
-            }
-        />
-    </div>
-
-    <div className='titlewinput margintop12'>
-        <p className='inputtile f14'>
-            {isArabic ? "طريقة التنبيه" : "Alert Method"}
-        </p>
-
-        <select className='inputc martop3 w295'>
-            <option>
-                {isArabic ? "رسالة نصية" : "SMS"}
-            </option>
-
-            <option>
-                {isArabic ? "إشعار داخل التطبيق" : "In-App Notification"}
-            </option>
-
-            <option>
-                {isArabic ? "مكالمة هاتفية" : "Phone Call"}
-            </option>
-        </select>
-    </div>
-
-   
-</div>
+                                <div className='titlewinput margintop12'>
+                                    <p className='inputtile f14'>
+                                        {isArabic ? "طريقة التنبيه" : "Alert Method"}
+                                    </p>
+                                    <select className='inputc martop3 w295'>
+                                        <option>{isArabic ? "رسالة نصية" : "SMS"}</option>
+                                        <option>{isArabic ? "إشعار داخل التطبيق" : "In-App Notification"}</option>
+                                        <option>{isArabic ? "مكالمة هاتفية" : "Phone Call"}</option>
+                                    </select>
+                                </div>
+                            </div>
 
                             <Link to="/home" style={{ textDecoration: 'none' }}>
                                 <Button text={isArabic ? "إضافة التذكير" : "Add Reminder"} width="335px" />
@@ -414,7 +403,7 @@ If you cannot read the prescription clearly, return an empty array: []`,
             {cameraMode === 'viewfinder' && (
                 <div className="camera-sim-overlay">
                     <div className="viewfinder">
-                        <video ref={videoRef} style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }} playsInline muted />
+                        <video ref={videoRef} className="webcam-view" playsInline muted />
                         <div className="scan-focus-box" style={{ position: 'relative', zIndex: 2 }}>
                             <div className="corner tl"></div>
                             <div className="corner tr"></div>
@@ -434,13 +423,16 @@ If you cannot read the prescription clearly, return an empty array: []`,
                 </div>
             )}
 
-            {/* Analyzing overlay */}
+            {/* Dynamic Analyzing Overlay */}
             {(cameraMode === 'captured' || analyzing) && (
-                <div className="camera-sim-overlay captured-bg">
+                <div 
+                    className="camera-sim-overlay dynamic-captured-bg" 
+                    style={{ backgroundImage: `url(${capturedImageUri})` }}
+                >
                     <div className="captured-content">
                         <motion.div
                             className="scanning-bar"
-                            animate={{ top: ["0%", "100%", "0%"] }}
+                            animate={{ top: ["30%", "70%", "30%"] }}
                             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                         />
                         <p className="processing-text">
@@ -454,5 +446,3 @@ If you cannot read the prescription clearly, return an empty array: []`,
 }
 
 export default Reminder;
-
-
